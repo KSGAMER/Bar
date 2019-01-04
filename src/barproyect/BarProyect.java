@@ -5,7 +5,9 @@
  */
 package barproyect;
 
+import Vista.Controlpanel;
 import Vista.Ventana;
+import javax.swing.UIManager;
 
 /**
  *
@@ -17,7 +19,12 @@ public class BarProyect {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Ventana v = new Ventana();
+        try {
+            UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
+        } catch (Exception ee) {
+            System.out.println(ee);
+        }
+        Controlpanel v = new Controlpanel();
         v.setVisible(true);
     }
     

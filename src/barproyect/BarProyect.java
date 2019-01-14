@@ -7,6 +7,7 @@ package barproyect;
 
 import Vista.Controlpanel;
 import Vista.Ventana;
+import Vista.Dashboard;
 import javax.swing.UIManager;
 
 /**
@@ -24,7 +25,7 @@ public class BarProyect {
         } catch (Exception ee) {
             System.out.println(ee);
         }
-        Controlpanel v = new Controlpanel();
+        Dashboard v = new Dashboard();
         v.setVisible(true);
     }
     

@@ -22,10 +22,9 @@ public class Dashboard extends javax.swing.JFrame {
         Iniciar();
     }
 
-    void Iniciar(){
+    void Iniciar() {
         EscritorioInterno.setBorder(new ImagenFondo("../Imagen/bar2.jpg"));
-        
-        
+        Deslizable();
     }
 
     /**
@@ -42,15 +41,15 @@ public class Dashboard extends javax.swing.JFrame {
         BntMenu1 = new javax.swing.JLabel();
         MenuDesple = new javax.swing.JPanel();
         FotoInicial = new com.bolivia.label.CLabel();
-        jLabel1 = new javax.swing.JLabel();
+        LBUser = new javax.swing.JLabel();
         LbUsuario = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        LBproduc = new javax.swing.JLabel();
         LbProductos = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        LBDama = new javax.swing.JLabel();
         LbDama = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        LBVentas = new javax.swing.JLabel();
         LbVentas = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        LBCaja = new javax.swing.JLabel();
         LbCaja = new javax.swing.JLabel();
         EscritorioInterno = new javax.swing.JDesktopPane();
 
@@ -90,40 +89,55 @@ public class Dashboard extends javax.swing.JFrame {
         FotoInicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/userN.png"))); // NOI18N
         FotoInicial.setText("");
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/users.png"))); // NOI18N
+        LBUser.setForeground(new java.awt.Color(255, 255, 255));
+        LBUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/users.png"))); // NOI18N
+        LBUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LBUser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LBUserMouseClicked(evt);
+            }
+        });
 
         LbUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbUsuario.setForeground(new java.awt.Color(255, 255, 255));
         LbUsuario.setText("Usuario");
         LbUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/archive.png"))); // NOI18N
+        LBproduc.setForeground(new java.awt.Color(255, 255, 255));
+        LBproduc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/archive.png"))); // NOI18N
+        LBproduc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LBproduc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LBproducMouseClicked(evt);
+            }
+        });
 
         LbProductos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbProductos.setForeground(new java.awt.Color(255, 255, 255));
         LbProductos.setText("Productos");
         LbProductos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/gift.png"))); // NOI18N
+        LBDama.setForeground(new java.awt.Color(255, 255, 255));
+        LBDama.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/gift.png"))); // NOI18N
+        LBDama.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LbDama.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbDama.setForeground(new java.awt.Color(255, 255, 255));
         LbDama.setText("Dama/Cerv");
         LbDama.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/shopping-cart.png"))); // NOI18N
+        LBVentas.setForeground(new java.awt.Color(255, 255, 255));
+        LBVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/shopping-cart.png"))); // NOI18N
+        LBVentas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LbVentas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbVentas.setForeground(new java.awt.Color(255, 255, 255));
         LbVentas.setText("Ventas");
         LbVentas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/bill.png"))); // NOI18N
+        LBCaja.setForeground(new java.awt.Color(255, 255, 255));
+        LBCaja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/bill.png"))); // NOI18N
+        LBCaja.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         LbCaja.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbCaja.setForeground(new java.awt.Color(255, 255, 255));
@@ -141,27 +155,27 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(FotoInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MenuDespleLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1)
+                        .addComponent(LBUser)
                         .addGap(0, 0, 0)
                         .addComponent(LbUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MenuDespleLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2)
+                        .addComponent(LBproduc)
                         .addGap(0, 0, 0)
                         .addComponent(LbProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MenuDespleLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel3)
+                        .addComponent(LBDama)
                         .addGap(0, 0, 0)
                         .addComponent(LbDama, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MenuDespleLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel4)
+                        .addComponent(LBVentas)
                         .addGap(0, 0, 0)
                         .addComponent(LbVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MenuDespleLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel5)
+                        .addComponent(LBCaja)
                         .addGap(0, 0, 0)
                         .addComponent(LbCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(22, Short.MAX_VALUE))
@@ -174,31 +188,31 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MenuDespleLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel1))
+                        .addComponent(LBUser))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuDespleLayout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(LbUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
+                    .addComponent(LBproduc)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuDespleLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(LbProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
+                    .addComponent(LBDama)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuDespleLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(LbDama, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
+                    .addComponent(LBVentas)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuDespleLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(LbVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
                 .addGroup(MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
+                    .addComponent(LBCaja)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuDespleLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(LbCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -250,17 +264,18 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
         String Des = "La";
-        int w = 230;
-        void Cambio(boolean Bo){
-            FotoInicial.setVisible(Bo);
-            LbUsuario.setVisible(Bo);
-            LbProductos.setVisible(Bo);
-            LbDama.setVisible(Bo);
-            LbCaja.setVisible(Bo);
-            LbVentas.setVisible(Bo);
-        }
-    private void BntMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BntMenu1MouseClicked
+    int w = 230;
 
+    void Cambio(boolean Bo) {
+        FotoInicial.setVisible(Bo);
+        LbUsuario.setVisible(Bo);
+        LbProductos.setVisible(Bo);
+        LbDama.setVisible(Bo);
+        LbCaja.setVisible(Bo);
+        LbVentas.setVisible(Bo);
+    }
+
+    void Deslizable() {
         if (Des.equals("La")) {
 //            double width = MenuDesple.getWidth() * 0.80;
 //            System.out.println(width);
@@ -277,7 +292,28 @@ public class Dashboard extends javax.swing.JFrame {
             Des = "La";
             Cambio(true);
         }
+    }
+    private void BntMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BntMenu1MouseClicked
+        Deslizable();
     }//GEN-LAST:event_BntMenu1MouseClicked
+
+    private void LBUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBUserMouseClicked
+        if(Des.equals("La")){
+            Deslizable();
+        }
+        AddUser adU = new AddUser();
+        EscritorioInterno.add(adU);
+        adU.setVisible(true);
+    }//GEN-LAST:event_LBUserMouseClicked
+
+    private void LBproducMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBproducMouseClicked
+        if(Des.equals("La")){
+            Deslizable();
+        }
+        Category Ca = new Category();
+        EscritorioInterno.add(Ca);
+        Ca.setVisible(true);
+    }//GEN-LAST:event_LBproducMouseClicked
 
     /**
      * @param args the command line arguments
@@ -320,16 +356,16 @@ public class Dashboard extends javax.swing.JFrame {
     private com.bolivia.label.CLabel FotoInicial;
     private javax.swing.JPanel Header;
     private javax.swing.JPanel JPrincipal;
+    private javax.swing.JLabel LBCaja;
+    private javax.swing.JLabel LBDama;
+    private javax.swing.JLabel LBUser;
+    private javax.swing.JLabel LBVentas;
+    private javax.swing.JLabel LBproduc;
     private javax.swing.JLabel LbCaja;
     private javax.swing.JLabel LbDama;
     private javax.swing.JLabel LbProductos;
     private javax.swing.JLabel LbUsuario;
     private javax.swing.JLabel LbVentas;
     private javax.swing.JPanel MenuDesple;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }

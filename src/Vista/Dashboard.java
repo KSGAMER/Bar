@@ -223,7 +223,7 @@ public class Dashboard extends javax.swing.JFrame {
         EscritorioInterno.setLayout(EscritorioInternoLayout);
         EscritorioInternoLayout.setHorizontalGroup(
             EscritorioInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 774, Short.MAX_VALUE)
+            .addGap(0, 1037, Short.MAX_VALUE)
         );
         EscritorioInternoLayout.setVerticalGroup(
             EscritorioInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,16 +279,16 @@ public class Dashboard extends javax.swing.JFrame {
         if (Des.equals("La")) {
 //            double width = MenuDesple.getWidth() * 0.80;
 //            System.out.println(width);
-            MenuDesple.setSize(w, MenuDesple.getHeight());
-            EscritorioInterno.setSize(EscritorioInterno.getWidth() + w, EscritorioInterno.getHeight());
-            EscritorioInterno.setLocation(EscritorioInterno.getX() - w, EscritorioInterno.getY());
+              MenuDesple.setSize(w, MenuDesple.getHeight());
+            EscritorioInterno.setSize(EscritorioInterno.getWidth() - w, EscritorioInterno.getHeight());
+            EscritorioInterno.setLocation(EscritorioInterno.getX() + w, EscritorioInterno.getY());
             Des = "Oc";
             Cambio(false);
         } else if (Des.equals("Oc")) {
-
+//
             MenuDesple.setSize(w + w, MenuDesple.getHeight());
-            EscritorioInterno.setSize(EscritorioInterno.getWidth() - w, EscritorioInterno.getHeight());
-            EscritorioInterno.setLocation(EscritorioInterno.getX() + w, EscritorioInterno.getY());
+            EscritorioInterno.setSize(EscritorioInterno.getWidth() + w, EscritorioInterno.getHeight());
+            EscritorioInterno.setLocation(EscritorioInterno.getX() - w, EscritorioInterno.getY());
             Des = "La";
             Cambio(true);
         }

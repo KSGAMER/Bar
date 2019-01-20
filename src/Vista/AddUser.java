@@ -10,7 +10,7 @@ package Vista;
  * @author muert
  */
 public class AddUser extends javax.swing.JInternalFrame {
-
+  
     /**
      * Creates new form AddUser
      */

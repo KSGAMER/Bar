@@ -5,9 +5,7 @@
  */
 package barproyect;
 
-import Vista.Controlpanel;
 import Vista.Ventana;
-import Vista.Dashboard;
 import javax.swing.UIManager;
 
 /**
@@ -21,11 +19,11 @@ public class BarProyect {
      */
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
+//            UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
         } catch (Exception ee) {
             System.out.println(ee);
         }
-        Dashboard v = new Dashboard();
+        Ventana v = new Ventana();
         v.setVisible(true);
     }
     

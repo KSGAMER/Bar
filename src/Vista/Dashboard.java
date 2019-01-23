@@ -39,6 +39,9 @@ public class Dashboard extends javax.swing.JFrame {
         JPrincipal = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
         BntMenu1 = new javax.swing.JLabel();
+        pnlFuncinesPantallas = new javax.swing.JPanel();
+        lbX = new javax.swing.JLabel();
+        lbminimizar = new javax.swing.JLabel();
         MenuDesple = new javax.swing.JPanel();
         FotoInicial = new com.bolivia.label.CLabel();
         LBUser = new javax.swing.JLabel();
@@ -54,8 +57,10 @@ public class Dashboard extends javax.swing.JFrame {
         EscritorioInterno = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         JPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        JPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         Header.setBackground(new java.awt.Color(23, 66, 107));
 
@@ -67,6 +72,59 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        pnlFuncinesPantallas.setBackground(new java.awt.Color(23, 66, 107));
+
+        lbX.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lbX.setForeground(new java.awt.Color(255, 255, 255));
+        lbX.setText("X");
+        lbX.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbX.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbXMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbXMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbXMouseExited(evt);
+            }
+        });
+
+        lbminimizar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lbminimizar.setForeground(new java.awt.Color(255, 255, 255));
+        lbminimizar.setText("__");
+        lbminimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbminimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbminimizarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbminimizarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbminimizarMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlFuncinesPantallasLayout = new javax.swing.GroupLayout(pnlFuncinesPantallas);
+        pnlFuncinesPantallas.setLayout(pnlFuncinesPantallasLayout);
+        pnlFuncinesPantallasLayout.setHorizontalGroup(
+            pnlFuncinesPantallasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFuncinesPantallasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbminimizar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbX)
+                .addContainerGap())
+        );
+        pnlFuncinesPantallasLayout.setVerticalGroup(
+            pnlFuncinesPantallasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFuncinesPantallasLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lbX))
+            .addComponent(lbminimizar)
+        );
+
         javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
         Header.setLayout(HeaderLayout);
         HeaderLayout.setHorizontalGroup(
@@ -74,7 +132,8 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(HeaderLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(BntMenu1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlFuncinesPantallas, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         HeaderLayout.setVerticalGroup(
             HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,6 +141,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BntMenu1)
                 .addContainerGap())
+            .addGroup(HeaderLayout.createSequentialGroup()
+                .addComponent(pnlFuncinesPantallas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         MenuDesple.setBackground(new java.awt.Color(6, 33, 60));
@@ -216,14 +278,14 @@ public class Dashboard extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuDespleLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(LbCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout EscritorioInternoLayout = new javax.swing.GroupLayout(EscritorioInterno);
         EscritorioInterno.setLayout(EscritorioInternoLayout);
         EscritorioInternoLayout.setHorizontalGroup(
             EscritorioInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1037, Short.MAX_VALUE)
+            .addGap(0, 1035, Short.MAX_VALUE)
         );
         EscritorioInternoLayout.setVerticalGroup(
             EscritorioInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -234,17 +296,16 @@ public class Dashboard extends javax.swing.JFrame {
         JPrincipal.setLayout(JPrincipalLayout);
         JPrincipalLayout.setHorizontalGroup(
             JPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(JPrincipalLayout.createSequentialGroup()
                 .addComponent(MenuDesple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(EscritorioInterno))
+            .addComponent(Header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         JPrincipalLayout.setVerticalGroup(
             JPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPrincipalLayout.createSequentialGroup()
                 .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
                 .addGroup(JPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(MenuDesple, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(EscritorioInterno)))
@@ -315,6 +376,30 @@ public class Dashboard extends javax.swing.JFrame {
         Ca.setVisible(true);
     }//GEN-LAST:event_LBproducMouseClicked
 
+    private void lbXMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbXMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_lbXMouseClicked
+
+    private void lbXMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbXMouseEntered
+        //cb.HebntEntered(lbX);
+    }//GEN-LAST:event_lbXMouseEntered
+
+    private void lbXMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbXMouseExited
+        //cb.HebntExitd(lbX);
+    }//GEN-LAST:event_lbXMouseExited
+
+    private void lbminimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbminimizarMouseClicked
+        this.setExtendedState(ICONIFIED);
+    }//GEN-LAST:event_lbminimizarMouseClicked
+
+    private void lbminimizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbminimizarMouseEntered
+        //cb.HebntEntered(lbminimizar);
+    }//GEN-LAST:event_lbminimizarMouseEntered
+
+    private void lbminimizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbminimizarMouseExited
+      //  cb.HebntExitd(lbminimizar);
+    }//GEN-LAST:event_lbminimizarMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -367,5 +452,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel LbUsuario;
     private javax.swing.JLabel LbVentas;
     private javax.swing.JPanel MenuDesple;
+    private javax.swing.JLabel lbX;
+    private javax.swing.JLabel lbminimizar;
+    private javax.swing.JPanel pnlFuncinesPantallas;
     // End of variables declaration//GEN-END:variables
 }

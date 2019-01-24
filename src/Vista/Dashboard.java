@@ -6,6 +6,8 @@
 package Vista;
 
 import Controlador.ImagenFondo;
+import java.awt.Dimension;
+import java.awt.Point;
 
 /**
  *
@@ -340,7 +342,7 @@ public class Dashboard extends javax.swing.JFrame {
         if (Des.equals("La")) {
 //            double width = MenuDesple.getWidth() * 0.80;
 //            System.out.println(width);
-              MenuDesple.setSize(w, MenuDesple.getHeight());
+            MenuDesple.setSize(w, MenuDesple.getHeight());
             EscritorioInterno.setSize(EscritorioInterno.getWidth() - w, EscritorioInterno.getHeight());
             EscritorioInterno.setLocation(EscritorioInterno.getX() + w, EscritorioInterno.getY());
             Des = "Oc";
@@ -359,16 +361,20 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_BntMenu1MouseClicked
 
     private void LBUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBUserMouseClicked
-        if(Des.equals("La")){
+        if (Des.equals("La")) {
             Deslizable();
         }
         AddUser adU = new AddUser();
         EscritorioInterno.add(adU);
-        adU.setVisible(true);
+//        Dimension desktopSize = EscritorioInterno.getSize();
+//        Dimension FrameSize = this.getSize();
+//        adU.setLocation(new Point(desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+//        System.out.println((desktopSize.width - FrameSize.width)/2+"  "+ (desktopSize.height- FrameSize.height)/2);
+        adU.show();
     }//GEN-LAST:event_LBUserMouseClicked
 
     private void LBproducMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBproducMouseClicked
-        if(Des.equals("La")){
+        if (Des.equals("La")) {
             Deslizable();
         }
         Category Ca = new Category();
@@ -397,7 +403,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_lbminimizarMouseEntered
 
     private void lbminimizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbminimizarMouseExited
-      //  cb.HebntExitd(lbminimizar);
+        //  cb.HebntExitd(lbminimizar);
     }//GEN-LAST:event_lbminimizarMouseExited
 
     /**
@@ -437,7 +443,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BntMenu1;
-    private javax.swing.JDesktopPane EscritorioInterno;
+    public static javax.swing.JDesktopPane EscritorioInterno;
     private com.bolivia.label.CLabel FotoInicial;
     private javax.swing.JPanel Header;
     private javax.swing.JPanel JPrincipal;

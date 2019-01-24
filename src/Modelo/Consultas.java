@@ -23,6 +23,19 @@ public class Consultas {
     String cons;
     DefaultTableModel model;
     int id;
+    Statement st;
     
+    //agregar usuario nuevo 
+    public void AgregarUsuario(String nombre,String Apellido, String Usuario, String Contrase, String Fecha,String Estado){
+        try {
+            st = cn.createStatement();
+            //INSERT INTO `usuario` (`id`, `name`, `lastname`, `username`, `password`, `profile`, `date`, `status`) VALUES (NULL, 'Pedro', 'Gonzalez', 'Praxx', MD5('123456'), '1', '2019-01-24', '1');
+            st.executeUpdate("INSERT INTO usuario(name,lastname,username,password,profile,date,status)"
+                    + " VALUES ('"+nombre+"','"+Apellido+"','"+Usuario+"', MD5('"+Contrase+"'),'"+Estado+"','"+Fecha+"', '1')");
+        } catch (SQLException ex) {
+            Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
     
 }

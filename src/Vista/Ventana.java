@@ -82,10 +82,10 @@ public class Ventana extends javax.swing.JFrame {
         jLabel3.setText("Contraseña:");
 
         txtUsername.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtUsername.setText("Daniel");
+        txtUsername.setText("Dany");
 
         txtPassword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtPassword.setText("jPasswordField1");
+        txtPassword.setText("123456");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("Inicio de Sesión");

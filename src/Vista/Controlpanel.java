@@ -47,6 +47,7 @@ public class Controlpanel extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(36, 50, 56));
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(36, 50, 56));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

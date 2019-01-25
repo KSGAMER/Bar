@@ -57,11 +57,11 @@ public class Dashboard extends javax.swing.JFrame {
         LBCaja = new javax.swing.JLabel();
         LbCaja = new javax.swing.JLabel();
         EscritorioInterno = new javax.swing.JPanel();
+        Usuario = new javax.swing.JPanel();
         Caja = new javax.swing.JPanel();
         Ventas = new javax.swing.JPanel();
         CervDama = new javax.swing.JPanel();
         Productos = new javax.swing.JPanel();
-        Usuario = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -290,6 +290,19 @@ public class Dashboard extends javax.swing.JFrame {
 
         EscritorioInterno.setLayout(new java.awt.CardLayout());
 
+        javax.swing.GroupLayout UsuarioLayout = new javax.swing.GroupLayout(Usuario);
+        Usuario.setLayout(UsuarioLayout);
+        UsuarioLayout.setHorizontalGroup(
+            UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1033, Short.MAX_VALUE)
+        );
+        UsuarioLayout.setVerticalGroup(
+            UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 623, Short.MAX_VALUE)
+        );
+
+        EscritorioInterno.add(Usuario, "card2");
+
         javax.swing.GroupLayout CajaLayout = new javax.swing.GroupLayout(Caja);
         Caja.setLayout(CajaLayout);
         CajaLayout.setHorizontalGroup(
@@ -341,19 +354,6 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         EscritorioInterno.add(Productos, "card3");
-
-        javax.swing.GroupLayout UsuarioLayout = new javax.swing.GroupLayout(Usuario);
-        Usuario.setLayout(UsuarioLayout);
-        UsuarioLayout.setHorizontalGroup(
-            UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
-        );
-        UsuarioLayout.setVerticalGroup(
-            UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 623, Short.MAX_VALUE)
-        );
-
-        EscritorioInterno.add(Usuario, "card2");
 
         javax.swing.GroupLayout JPrincipalLayout = new javax.swing.GroupLayout(JPrincipal);
         JPrincipal.setLayout(JPrincipalLayout);

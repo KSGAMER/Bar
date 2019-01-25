@@ -5,10 +5,6 @@
  */
 package Vista;
 
-import Controlador.ImagenFondo;
-import java.awt.Dimension;
-import java.awt.Point;
-
 /**
  *
  * @author muert
@@ -57,11 +53,6 @@ public class Dashboard extends javax.swing.JFrame {
         LBCaja = new javax.swing.JLabel();
         LbCaja = new javax.swing.JLabel();
         EscritorioInterno = new javax.swing.JPanel();
-        Usuario = new javax.swing.JPanel();
-        Caja = new javax.swing.JPanel();
-        Ventas = new javax.swing.JPanel();
-        CervDama = new javax.swing.JPanel();
-        Productos = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -288,72 +279,18 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(75, Short.MAX_VALUE))
         );
 
-        EscritorioInterno.setLayout(new java.awt.CardLayout());
+        EscritorioInterno.setBackground(new java.awt.Color(255, 0, 51));
 
-        javax.swing.GroupLayout UsuarioLayout = new javax.swing.GroupLayout(Usuario);
-        Usuario.setLayout(UsuarioLayout);
-        UsuarioLayout.setHorizontalGroup(
-            UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
+        javax.swing.GroupLayout EscritorioInternoLayout = new javax.swing.GroupLayout(EscritorioInterno);
+        EscritorioInterno.setLayout(EscritorioInternoLayout);
+        EscritorioInternoLayout.setHorizontalGroup(
+            EscritorioInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1029, Short.MAX_VALUE)
         );
-        UsuarioLayout.setVerticalGroup(
-            UsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 623, Short.MAX_VALUE)
+        EscritorioInternoLayout.setVerticalGroup(
+            EscritorioInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 624, Short.MAX_VALUE)
         );
-
-        EscritorioInterno.add(Usuario, "card2");
-
-        javax.swing.GroupLayout CajaLayout = new javax.swing.GroupLayout(Caja);
-        Caja.setLayout(CajaLayout);
-        CajaLayout.setHorizontalGroup(
-            CajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
-        );
-        CajaLayout.setVerticalGroup(
-            CajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 623, Short.MAX_VALUE)
-        );
-
-        EscritorioInterno.add(Caja, "card6");
-
-        javax.swing.GroupLayout VentasLayout = new javax.swing.GroupLayout(Ventas);
-        Ventas.setLayout(VentasLayout);
-        VentasLayout.setHorizontalGroup(
-            VentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
-        );
-        VentasLayout.setVerticalGroup(
-            VentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 623, Short.MAX_VALUE)
-        );
-
-        EscritorioInterno.add(Ventas, "card5");
-
-        javax.swing.GroupLayout CervDamaLayout = new javax.swing.GroupLayout(CervDama);
-        CervDama.setLayout(CervDamaLayout);
-        CervDamaLayout.setHorizontalGroup(
-            CervDamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
-        );
-        CervDamaLayout.setVerticalGroup(
-            CervDamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 623, Short.MAX_VALUE)
-        );
-
-        EscritorioInterno.add(CervDama, "card4");
-
-        javax.swing.GroupLayout ProductosLayout = new javax.swing.GroupLayout(Productos);
-        Productos.setLayout(ProductosLayout);
-        ProductosLayout.setHorizontalGroup(
-            ProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1033, Short.MAX_VALUE)
-        );
-        ProductosLayout.setVerticalGroup(
-            ProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 623, Short.MAX_VALUE)
-        );
-
-        EscritorioInterno.add(Productos, "card3");
 
         javax.swing.GroupLayout JPrincipalLayout = new javax.swing.GroupLayout(JPrincipal);
         JPrincipal.setLayout(JPrincipalLayout);
@@ -361,22 +298,17 @@ public class Dashboard extends javax.swing.JFrame {
             JPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPrincipalLayout.createSequentialGroup()
                 .addComponent(MenuDesple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1035, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(EscritorioInterno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(Header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(JPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPrincipalLayout.createSequentialGroup()
-                    .addGap(0, 188, Short.MAX_VALUE)
-                    .addComponent(EscritorioInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 1033, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         JPrincipalLayout.setVerticalGroup(
             JPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPrincipalLayout.createSequentialGroup()
                 .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(MenuDesple, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(JPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPrincipalLayout.createSequentialGroup()
-                    .addGap(0, 63, Short.MAX_VALUE)
-                    .addComponent(EscritorioInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(JPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MenuDesple, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EscritorioInterno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -410,15 +342,25 @@ public class Dashboard extends javax.swing.JFrame {
 //            System.out.println(width);
             MenuDesple.setSize(w, MenuDesple.getHeight());
             EscritorioInterno.setSize(EscritorioInterno.getWidth() - w, EscritorioInterno.getHeight());
+//            System.out.println(EscritorioInterno.getX() +" "+ w);
             EscritorioInterno.setLocation(EscritorioInterno.getX() + w, EscritorioInterno.getY());
+//            System.out.println(EscritorioInterno.getWidth() - w+" "+ EscritorioInterno.getHeight());
+//            System.out.println(EscritorioInterno.getX() + w+" lo "+ EscritorioInterno.getY());
+//            
+//            System.out.println("__________________________________________________________________________");
             Des = "Oc";
             Cambio(false);
         } else if (Des.equals("Oc")) {
 //
             MenuDesple.setSize(w + w, MenuDesple.getHeight());
             EscritorioInterno.setSize(EscritorioInterno.getWidth() + w, EscritorioInterno.getHeight());
+//            System.out.println(EscritorioInterno.getX() +" "+ w);
             EscritorioInterno.setLocation(EscritorioInterno.getX() - w, EscritorioInterno.getY());
             Des = "La";
+//            System.out.println(EscritorioInterno.getWidth() - w+" "+ EscritorioInterno.getHeight());
+//            System.out.println(EscritorioInterno.getX() + w+" lo "+ EscritorioInterno.getY());
+//            
+//            System.out.println("__________________________________________________________________________");
             Cambio(true);
         }
     }
@@ -509,8 +451,6 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BntMenu1;
-    private javax.swing.JPanel Caja;
-    private javax.swing.JPanel CervDama;
     private javax.swing.JPanel EscritorioInterno;
     private com.bolivia.label.CLabel FotoInicial;
     private javax.swing.JPanel Header;
@@ -526,9 +466,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel LbUsuario;
     private javax.swing.JLabel LbVentas;
     private javax.swing.JPanel MenuDesple;
-    private javax.swing.JPanel Productos;
-    private javax.swing.JPanel Usuario;
-    private javax.swing.JPanel Ventas;
     private javax.swing.JLabel lbX;
     private javax.swing.JLabel lbminimizar;
     private javax.swing.JPanel pnlFuncinesPantallas;

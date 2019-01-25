@@ -237,7 +237,7 @@ public class AddUser extends javax.swing.JInternalFrame {
 
     private void BntListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BntListaMouseClicked
         ListUser lisU = new ListUser();
-        Dashboard.EscritorioInterno.add(lisU);
+//        Dashboard.EscritorioInterno.add(lisU);
         lisU.setVisible(true);
         dispose();
     }//GEN-LAST:event_BntListaMouseClicked

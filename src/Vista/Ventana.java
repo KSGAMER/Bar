@@ -95,6 +95,7 @@ public class Ventana extends javax.swing.JFrame {
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnLogin.setText("Ingresar");
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.setOpaque(true);
         btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -272,9 +273,9 @@ public class Ventana extends javax.swing.JFrame {
                 Rango = rs.getString("profile");
             }
             if (txtUsername.getText().equals(Usuario)) {
-                Dashboard da = new Dashboard();
+                Dashboard d = new Dashboard();
                 
-                da.setVisible(true);
+                d.setVisible(true);
                 dispose();
             }else {
                 JOptionPane.showMessageDialog(null, "Usuario y/o Contraseña incorrectos", "Advertencia", 2);

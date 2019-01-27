@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author muert
@@ -41,7 +43,6 @@ public class Dashboard extends javax.swing.JFrame {
         lbX = new javax.swing.JLabel();
         lbminimizar = new javax.swing.JLabel();
         MenuDesple = new javax.swing.JPanel();
-        FotoInicial = new com.bolivia.label.CLabel();
         LBUser = new javax.swing.JLabel();
         LbUsuario = new javax.swing.JLabel();
         LBproduc = new javax.swing.JLabel();
@@ -53,6 +54,195 @@ public class Dashboard extends javax.swing.JFrame {
         LBCaja = new javax.swing.JLabel();
         LbCaja = new javax.swing.JLabel();
         EscritorioInterno = new javax.swing.JPanel();
+        Usuario = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        Caja = new javax.swing.JPanel();
+        jLabel87 = new javax.swing.JLabel();
+        jLabel86 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel115 = new javax.swing.JLabel();
+        jLabel119 = new javax.swing.JLabel();
+        jLabel118 = new javax.swing.JLabel();
+        jPasswordField2 = new javax.swing.JPasswordField();
+        jTextField37 = new javax.swing.JTextField();
+        jTextField36 = new javax.swing.JTextField();
+        jLabel117 = new javax.swing.JLabel();
+        jLabel116 = new javax.swing.JLabel();
+        CervDama = new javax.swing.JPanel();
+        jLabel89 = new javax.swing.JLabel();
+        jLabel88 = new javax.swing.JLabel();
+        jLabel90 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
+        jTextField29 = new javax.swing.JTextField();
+        jLabel92 = new javax.swing.JLabel();
+        jTextField30 = new javax.swing.JTextField();
+        jTextField32 = new javax.swing.JTextField();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jLabel93 = new javax.swing.JLabel();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jLabel99 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jTextField31 = new javax.swing.JTextField();
+        jLabel100 = new javax.swing.JLabel();
+        Productos = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel19 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        Productos1 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel34 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jLabel47 = new javax.swing.JLabel();
+        Productos2 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        jLabel51 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jLabel53 = new javax.swing.JLabel();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel54 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        jTextField20 = new javax.swing.JTextField();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        Productos3 = new javax.swing.JPanel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jTextField21 = new javax.swing.JTextField();
+        jLabel66 = new javax.swing.JLabel();
+        jTextField22 = new javax.swing.JTextField();
+        jLabel67 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jLabel68 = new javax.swing.JLabel();
+        jTextField23 = new javax.swing.JTextField();
+        jLabel69 = new javax.swing.JLabel();
+        jTextField24 = new javax.swing.JTextField();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
+        jTextField25 = new javax.swing.JTextField();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jTextField26 = new javax.swing.JTextField();
+        jLabel81 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTable7 = new javax.swing.JTable();
+        jTextField27 = new javax.swing.JTextField();
+        jLabel84 = new javax.swing.JLabel();
+        jTextField28 = new javax.swing.JTextField();
+        jLabel85 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Ventas = new javax.swing.JPanel();
+        jLabel102 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jLabel103 = new javax.swing.JLabel();
+        jLabel104 = new javax.swing.JLabel();
+        jTextField33 = new javax.swing.JTextField();
+        jLabel105 = new javax.swing.JLabel();
+        jLabel106 = new javax.swing.JLabel();
+        jLabel107 = new javax.swing.JLabel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel109 = new javax.swing.JLabel();
+        jLabel110 = new javax.swing.JLabel();
+        jLabel111 = new javax.swing.JLabel();
+        jLabel112 = new javax.swing.JLabel();
+        jLabel113 = new javax.swing.JLabel();
+        jTextField34 = new javax.swing.JTextField();
+        jLabel114 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -146,9 +336,6 @@ public class Dashboard extends javax.swing.JFrame {
 
         MenuDesple.setBackground(new java.awt.Color(6, 33, 60));
 
-        FotoInicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/userN.png"))); // NOI18N
-        FotoInicial.setText("");
-
         LBUser.setForeground(new java.awt.Color(255, 255, 255));
         LBUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/users.png"))); // NOI18N
         LBUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -162,6 +349,11 @@ public class Dashboard extends javax.swing.JFrame {
         LbUsuario.setForeground(new java.awt.Color(255, 255, 255));
         LbUsuario.setText("Usuario");
         LbUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbUsuarioMouseClicked(evt);
+            }
+        });
 
         LBproduc.setForeground(new java.awt.Color(255, 255, 255));
         LBproduc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/archive.png"))); // NOI18N
@@ -176,65 +368,93 @@ public class Dashboard extends javax.swing.JFrame {
         LbProductos.setForeground(new java.awt.Color(255, 255, 255));
         LbProductos.setText("Productos");
         LbProductos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbProductos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbProductosMouseClicked(evt);
+            }
+        });
 
         LBDama.setForeground(new java.awt.Color(255, 255, 255));
         LBDama.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/gift.png"))); // NOI18N
         LBDama.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LBDama.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LBDamaMouseClicked(evt);
+            }
+        });
 
         LbDama.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbDama.setForeground(new java.awt.Color(255, 255, 255));
         LbDama.setText("Dama/Cerv");
         LbDama.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbDama.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbDamaMouseClicked(evt);
+            }
+        });
 
         LBVentas.setForeground(new java.awt.Color(255, 255, 255));
         LBVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/shopping-cart.png"))); // NOI18N
         LBVentas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LBVentas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LBVentasMouseClicked(evt);
+            }
+        });
 
         LbVentas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbVentas.setForeground(new java.awt.Color(255, 255, 255));
         LbVentas.setText("Ventas");
         LbVentas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbVentas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbVentasMouseClicked(evt);
+            }
+        });
 
         LBCaja.setForeground(new java.awt.Color(255, 255, 255));
         LBCaja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/bill.png"))); // NOI18N
         LBCaja.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LBCaja.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LBCajaMouseClicked(evt);
+            }
+        });
 
         LbCaja.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbCaja.setForeground(new java.awt.Color(255, 255, 255));
         LbCaja.setText("Caja A/C");
         LbCaja.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LbCaja.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbCajaMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout MenuDespleLayout = new javax.swing.GroupLayout(MenuDesple);
         MenuDesple.setLayout(MenuDespleLayout);
         MenuDespleLayout.setHorizontalGroup(
             MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuDespleLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MenuDespleLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(FotoInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MenuDespleLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(LBUser)
                         .addGap(0, 0, 0)
                         .addComponent(LbUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MenuDespleLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(LBproduc)
                         .addGap(0, 0, 0)
                         .addComponent(LbProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MenuDespleLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(LBDama)
                         .addGap(0, 0, 0)
                         .addComponent(LbDama, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MenuDespleLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(LBVentas)
                         .addGap(0, 0, 0)
                         .addComponent(LbVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MenuDespleLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(LBCaja)
                         .addGap(0, 0, 0)
                         .addComponent(LbCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -243,14 +463,12 @@ public class Dashboard extends javax.swing.JFrame {
         MenuDespleLayout.setVerticalGroup(
             MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuDespleLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(FotoInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MenuDespleLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGap(60, 60, 60)
                         .addComponent(LBUser))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuDespleLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
+                        .addGap(90, 90, 90)
                         .addComponent(LbUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(MenuDespleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,21 +494,1134 @@ public class Dashboard extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuDespleLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(LbCaja, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         EscritorioInterno.setBackground(new java.awt.Color(255, 0, 51));
+        EscritorioInterno.setLayout(new java.awt.CardLayout());
 
-        javax.swing.GroupLayout EscritorioInternoLayout = new javax.swing.GroupLayout(EscritorioInterno);
-        EscritorioInterno.setLayout(EscritorioInternoLayout);
-        EscritorioInternoLayout.setHorizontalGroup(
-            EscritorioInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1029, Short.MAX_VALUE)
+        Usuario.setLayout(null);
+
+        jLabel1.setText("Nombre:");
+        Usuario.add(jLabel1);
+        jLabel1.setBounds(50, 140, 60, 14);
+
+        jLabel2.setText("Apellido:");
+        Usuario.add(jLabel2);
+        jLabel2.setBounds(50, 200, 60, 14);
+
+        jLabel3.setText("Usuario:");
+        Usuario.add(jLabel3);
+        jLabel3.setBounds(50, 320, 60, 14);
+
+        jLabel4.setText("Fecha:");
+        Usuario.add(jLabel4);
+        jLabel4.setBounds(50, 260, 80, 14);
+
+        jLabel5.setText("Contraseña:");
+        Usuario.add(jLabel5);
+        jLabel5.setBounds(50, 380, 80, 14);
+        Usuario.add(jTextField1);
+        jTextField1.setBounds(50, 160, 240, 30);
+        Usuario.add(jTextField3);
+        jTextField3.setBounds(50, 220, 240, 30);
+        Usuario.add(jTextField2);
+        jTextField2.setBounds(50, 340, 240, 30);
+        Usuario.add(jDateChooser1);
+        jDateChooser1.setBounds(50, 280, 240, 30);
+        Usuario.add(jPasswordField1);
+        jPasswordField1.setBounds(50, 400, 240, 30);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Registro de Usuarios");
+        Usuario.add(jLabel6);
+        jLabel6.setBounds(20, 10, 142, 17);
+
+        jLabel7.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel7.setOpaque(true);
+        Usuario.add(jLabel7);
+        jLabel7.setBounds(0, 0, 1340, 40);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        Usuario.add(jScrollPane1);
+        jScrollPane1.setBounds(350, 140, 640, 370);
+
+        jLabel8.setBackground(new java.awt.Color(61, 136, 56));
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Agregar");
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.setOpaque(true);
+        Usuario.add(jLabel8);
+        jLabel8.setBounds(50, 60, 120, 40);
+
+        jLabel9.setBackground(new java.awt.Color(42, 61, 121));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Modificar");
+        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel9.setOpaque(true);
+        Usuario.add(jLabel9);
+        jLabel9.setBounds(200, 60, 120, 40);
+
+        jLabel10.setBackground(new java.awt.Color(190, 41, 41));
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Eliminar");
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel10.setOpaque(true);
+        Usuario.add(jLabel10);
+        jLabel10.setBounds(350, 60, 100, 40);
+
+        jLabel11.setBackground(new java.awt.Color(188, 14, 14));
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Cancelar");
+        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel11.setOpaque(true);
+        Usuario.add(jLabel11);
+        jLabel11.setBounds(190, 470, 110, 40);
+
+        jLabel12.setBackground(new java.awt.Color(15, 142, 27));
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Aceptar");
+        jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel12.setOpaque(true);
+        Usuario.add(jLabel12);
+        jLabel12.setBounds(50, 470, 110, 40);
+
+        jLabel15.setBackground(new java.awt.Color(47, 153, 57));
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("Buscar");
+        jLabel15.setOpaque(true);
+        Usuario.add(jLabel15);
+        jLabel15.setBounds(880, 60, 110, 40);
+        Usuario.add(jTextField4);
+        jTextField4.setBounds(520, 60, 370, 40);
+
+        EscritorioInterno.add(Usuario, "card3");
+
+        Caja.setLayout(null);
+
+        jLabel87.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel87.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel87.setText("Cierre de Caja");
+        Caja.add(jLabel87);
+        jLabel87.setBounds(20, 10, 170, 17);
+
+        jLabel86.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel86.setOpaque(true);
+        Caja.add(jLabel86);
+        jLabel86.setBounds(0, 0, 1300, 40);
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel115.setText("Contraseña:");
+
+        jLabel119.setBackground(new java.awt.Color(41, 154, 41));
+        jLabel119.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel119.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel119.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel119.setText("Descargar");
+        jLabel119.setOpaque(true);
+
+        jLabel118.setBackground(new java.awt.Color(194, 24, 24));
+        jLabel118.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel118.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel118.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel118.setText("Cerrar");
+        jLabel118.setOpaque(true);
+
+        jPasswordField2.setText("jPasswordFie");
+
+        jTextField37.setText("Daniel");
+
+        jTextField36.setText("$170.00");
+
+        jLabel117.setText("Usuario:");
+
+        jLabel116.setText("Monto:");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 82, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(55, 55, 55)
+                                .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(119, 119, 119))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel119, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel118, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(101, 101, 101))))
         );
-        EscritorioInternoLayout.setVerticalGroup(
-            EscritorioInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(99, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel119, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel118, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(84, 84, 84))
+        );
+
+        Caja.add(jPanel2);
+        jPanel2.setBounds(390, 110, 490, 380);
+
+        EscritorioInterno.add(Caja, "card6");
+
+        CervDama.setLayout(null);
+
+        jLabel89.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel89.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel89.setText("Registro de Dama");
+        CervDama.add(jLabel89);
+        jLabel89.setBounds(20, 10, 170, 17);
+
+        jLabel88.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel88.setOpaque(true);
+        CervDama.add(jLabel88);
+        jLabel88.setBounds(0, 0, 1350, 40);
+
+        jLabel90.setBackground(new java.awt.Color(61, 136, 56));
+        jLabel90.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel90.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel90.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel90.setText("Agregar");
+        jLabel90.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel90.setOpaque(true);
+        CervDama.add(jLabel90);
+        jLabel90.setBounds(50, 60, 120, 40);
+
+        jLabel91.setText("Nombre:");
+        CervDama.add(jLabel91);
+        jLabel91.setBounds(50, 140, 70, 14);
+        CervDama.add(jTextField29);
+        jTextField29.setBounds(50, 160, 210, 30);
+
+        jLabel92.setText("Precio:");
+        CervDama.add(jLabel92);
+        jLabel92.setBounds(50, 200, 60, 14);
+        CervDama.add(jTextField30);
+        jTextField30.setBounds(50, 220, 210, 30);
+        CervDama.add(jTextField32);
+        jTextField32.setBounds(290, 160, 210, 30);
+
+        jLabel94.setText("Unidad:");
+        CervDama.add(jLabel94);
+        jLabel94.setBounds(290, 140, 50, 14);
+
+        jLabel95.setBackground(new java.awt.Color(42, 61, 121));
+        jLabel95.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel95.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel95.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel95.setText("Modificar");
+        jLabel95.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel95.setOpaque(true);
+        CervDama.add(jLabel95);
+        jLabel95.setBounds(200, 60, 120, 40);
+
+        jLabel96.setBackground(new java.awt.Color(190, 41, 41));
+        jLabel96.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel96.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel96.setText("Eliminar");
+        jLabel96.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel96.setOpaque(true);
+        CervDama.add(jLabel96);
+        jLabel96.setBounds(350, 60, 100, 40);
+
+        jLabel97.setBackground(new java.awt.Color(188, 14, 14));
+        jLabel97.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel97.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel97.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel97.setText("Cancelar");
+        jLabel97.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel97.setOpaque(true);
+        CervDama.add(jLabel97);
+        jLabel97.setBounds(290, 340, 120, 40);
+
+        jLabel98.setBackground(new java.awt.Color(15, 142, 27));
+        jLabel98.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel98.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel98.setText("Aceptar");
+        jLabel98.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel98.setOpaque(true);
+        CervDama.add(jLabel98);
+        jLabel98.setBounds(120, 340, 130, 40);
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CervDama.add(jComboBox5);
+        jComboBox5.setBounds(50, 280, 210, 30);
+
+        jLabel93.setText("Categoria:");
+        CervDama.add(jLabel93);
+        jLabel93.setBounds(50, 260, 60, 14);
+
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CervDama.add(jComboBox6);
+        jComboBox6.setBounds(290, 220, 210, 30);
+
+        jLabel99.setText("Cerveza:");
+        CervDama.add(jLabel99);
+        jLabel99.setBounds(290, 200, 60, 14);
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        CervDama.add(jScrollPane2);
+        jScrollPane2.setBounds(550, 140, 580, 402);
+        CervDama.add(jTextField31);
+        jTextField31.setBounds(550, 60, 470, 40);
+
+        jLabel100.setBackground(new java.awt.Color(47, 153, 57));
+        jLabel100.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel100.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel100.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel100.setText("Buscar");
+        jLabel100.setOpaque(true);
+        CervDama.add(jLabel100);
+        jLabel100.setBounds(1020, 60, 100, 40);
+
+        EscritorioInterno.add(CervDama, "card4");
+
+        Productos.setForeground(new java.awt.Color(255, 255, 255));
+        Productos.setLayout(null);
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Registro de Productos");
+        Productos.add(jLabel14);
+        jLabel14.setBounds(20, 10, 170, 17);
+
+        jLabel13.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel13.setOpaque(true);
+        Productos.add(jLabel13);
+        jLabel13.setBounds(0, 0, 1270, 40);
+
+        jLabel16.setText("Producto:");
+        Productos.add(jLabel16);
+        jLabel16.setBounds(50, 110, 70, 14);
+        Productos.add(jTextField5);
+        jTextField5.setBounds(50, 130, 210, 30);
+
+        jLabel17.setText("Precio:");
+        Productos.add(jLabel17);
+        jLabel17.setBounds(50, 170, 60, 14);
+        Productos.add(jTextField6);
+        jTextField6.setBounds(50, 190, 210, 30);
+
+        jLabel18.setText("Categoria:");
+        Productos.add(jLabel18);
+        jLabel18.setBounds(50, 230, 60, 14);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Productos.add(jComboBox1);
+        jComboBox1.setBounds(50, 250, 210, 30);
+
+        jLabel19.setText("Unidad:");
+        Productos.add(jLabel19);
+        jLabel19.setBounds(290, 110, 50, 14);
+        Productos.add(jTextField7);
+        jTextField7.setBounds(290, 130, 210, 30);
+
+        jLabel20.setText("Imagen:");
+        Productos.add(jLabel20);
+        jLabel20.setBounds(290, 170, 50, 14);
+        Productos.add(jTextField8);
+        jTextField8.setBounds(290, 190, 210, 30);
+
+        jLabel21.setBackground(new java.awt.Color(61, 136, 56));
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("Agregar");
+        jLabel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel21.setOpaque(true);
+        Productos.add(jLabel21);
+        jLabel21.setBounds(50, 60, 120, 40);
+
+        jLabel22.setBackground(new java.awt.Color(42, 61, 121));
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("Modificar");
+        jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel22.setOpaque(true);
+        Productos.add(jLabel22);
+        jLabel22.setBounds(200, 60, 120, 40);
+
+        jLabel23.setBackground(new java.awt.Color(190, 41, 41));
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText("Eliminar");
+        jLabel23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel23.setOpaque(true);
+        Productos.add(jLabel23);
+        jLabel23.setBounds(350, 60, 100, 40);
+
+        jLabel24.setBackground(new java.awt.Color(15, 142, 27));
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("Aceptar");
+        jLabel24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel24.setOpaque(true);
+        Productos.add(jLabel24);
+        jLabel24.setBounds(290, 240, 90, 40);
+
+        jLabel25.setBackground(new java.awt.Color(188, 14, 14));
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("Cancelar");
+        jLabel25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel25.setOpaque(true);
+        Productos.add(jLabel25);
+        jLabel25.setBounds(410, 240, 90, 40);
+        Productos.add(jTextField9);
+        jTextField9.setBounds(540, 60, 480, 40);
+
+        jLabel26.setBackground(new java.awt.Color(47, 153, 57));
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("Buscar");
+        jLabel26.setOpaque(true);
+        Productos.add(jLabel26);
+        jLabel26.setBounds(1020, 60, 100, 40);
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("Registro de Categorias");
+        Productos.add(jLabel28);
+        jLabel28.setBounds(20, 330, 170, 17);
+
+        jLabel27.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel27.setOpaque(true);
+        Productos.add(jLabel27);
+        jLabel27.setBounds(0, 320, 1290, 40);
+
+        Productos1.setForeground(new java.awt.Color(255, 255, 255));
+        Productos1.setLayout(null);
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setText("Registro de Productos");
+        Productos1.add(jLabel29);
+        jLabel29.setBounds(20, 10, 170, 17);
+
+        jLabel30.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel30.setOpaque(true);
+        Productos1.add(jLabel30);
+        jLabel30.setBounds(0, 0, 1180, 40);
+
+        jLabel31.setText("Producto:");
+        Productos1.add(jLabel31);
+        jLabel31.setBounds(50, 130, 70, 14);
+        Productos1.add(jTextField10);
+        jTextField10.setBounds(50, 150, 210, 30);
+
+        jLabel32.setText("Precio:");
+        Productos1.add(jLabel32);
+        jLabel32.setBounds(50, 190, 60, 14);
+        Productos1.add(jTextField11);
+        jTextField11.setBounds(50, 210, 210, 30);
+
+        jLabel33.setText("Categoria:");
+        Productos1.add(jLabel33);
+        jLabel33.setBounds(50, 250, 60, 14);
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Productos1.add(jComboBox2);
+        jComboBox2.setBounds(50, 270, 210, 30);
+
+        jLabel34.setText("Unidad:");
+        Productos1.add(jLabel34);
+        jLabel34.setBounds(290, 130, 50, 14);
+        Productos1.add(jTextField12);
+        jTextField12.setBounds(290, 150, 210, 30);
+
+        jLabel35.setText("Imagen:");
+        Productos1.add(jLabel35);
+        jLabel35.setBounds(290, 190, 50, 14);
+        Productos1.add(jTextField13);
+        jTextField13.setBounds(290, 210, 210, 30);
+
+        jLabel36.setBackground(new java.awt.Color(61, 136, 56));
+        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("Agregar");
+        jLabel36.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel36.setOpaque(true);
+        Productos1.add(jLabel36);
+        jLabel36.setBounds(50, 60, 120, 40);
+
+        jLabel37.setBackground(new java.awt.Color(42, 61, 121));
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel37.setText("Modificar");
+        jLabel37.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel37.setOpaque(true);
+        Productos1.add(jLabel37);
+        jLabel37.setBounds(200, 60, 120, 40);
+
+        jLabel38.setBackground(new java.awt.Color(190, 41, 41));
+        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel38.setText("Eliminar");
+        jLabel38.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel38.setOpaque(true);
+        Productos1.add(jLabel38);
+        jLabel38.setBounds(350, 60, 100, 40);
+
+        jLabel39.setBackground(new java.awt.Color(15, 142, 27));
+        jLabel39.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setText("Aceptar");
+        jLabel39.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel39.setOpaque(true);
+        Productos1.add(jLabel39);
+        jLabel39.setBounds(160, 320, 110, 40);
+
+        jLabel40.setBackground(new java.awt.Color(188, 14, 14));
+        jLabel40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setText("Cancelar");
+        jLabel40.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel40.setOpaque(true);
+        Productos1.add(jLabel40);
+        jLabel40.setBounds(300, 320, 110, 40);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        Productos1.add(jScrollPane3);
+        jScrollPane3.setBounds(540, 120, 440, 240);
+        Productos1.add(jTextField14);
+        jTextField14.setBounds(540, 60, 360, 40);
+
+        jLabel41.setBackground(new java.awt.Color(47, 153, 57));
+        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setText("Buscar");
+        jLabel41.setOpaque(true);
+        Productos1.add(jLabel41);
+        jLabel41.setBounds(900, 60, 80, 40);
+
+        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel42.setText("Registro de Categorias");
+        Productos1.add(jLabel42);
+        jLabel42.setBounds(10, 390, 170, 17);
+
+        jLabel43.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel43.setOpaque(true);
+        Productos1.add(jLabel43);
+        jLabel43.setBounds(0, 380, 1180, 40);
+
+        Productos.add(Productos1);
+        Productos1.setBounds(0, 0, 0, 0);
+
+        jLabel44.setBackground(new java.awt.Color(61, 136, 56));
+        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel44.setText("Agregar");
+        jLabel44.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel44.setOpaque(true);
+        Productos.add(jLabel44);
+        jLabel44.setBounds(40, 390, 120, 40);
+
+        jLabel45.setBackground(new java.awt.Color(42, 61, 121));
+        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel45.setText("Modificar");
+        jLabel45.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel45.setOpaque(true);
+        Productos.add(jLabel45);
+        jLabel45.setBounds(190, 390, 120, 40);
+
+        jLabel46.setBackground(new java.awt.Color(190, 41, 41));
+        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel46.setText("Eliminar");
+        jLabel46.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel46.setOpaque(true);
+        Productos.add(jLabel46);
+        jLabel46.setBounds(340, 390, 100, 40);
+        Productos.add(jTextField15);
+        jTextField15.setBounds(40, 480, 400, 30);
+
+        jLabel47.setText("Descripción:");
+        Productos.add(jLabel47);
+        jLabel47.setBounds(40, 460, 90, 14);
+
+        Productos2.setForeground(new java.awt.Color(255, 255, 255));
+        Productos2.setLayout(null);
+
+        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel48.setText("Registro de Productos");
+        Productos2.add(jLabel48);
+        jLabel48.setBounds(20, 10, 170, 17);
+
+        jLabel49.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel49.setOpaque(true);
+        Productos2.add(jLabel49);
+        jLabel49.setBounds(0, 0, 1180, 40);
+
+        jLabel50.setText("Producto:");
+        Productos2.add(jLabel50);
+        jLabel50.setBounds(50, 110, 70, 14);
+        Productos2.add(jTextField16);
+        jTextField16.setBounds(50, 130, 210, 30);
+
+        jLabel51.setText("Precio:");
+        Productos2.add(jLabel51);
+        jLabel51.setBounds(50, 170, 60, 14);
+        Productos2.add(jTextField17);
+        jTextField17.setBounds(50, 190, 210, 30);
+
+        jLabel52.setText("Categoria:");
+        Productos2.add(jLabel52);
+        jLabel52.setBounds(50, 230, 60, 14);
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Productos2.add(jComboBox3);
+        jComboBox3.setBounds(50, 250, 210, 30);
+
+        jLabel53.setText("Unidad:");
+        Productos2.add(jLabel53);
+        jLabel53.setBounds(290, 110, 50, 14);
+        Productos2.add(jTextField18);
+        jTextField18.setBounds(290, 130, 210, 30);
+
+        jLabel54.setText("Imagen:");
+        Productos2.add(jLabel54);
+        jLabel54.setBounds(290, 170, 50, 14);
+        Productos2.add(jTextField19);
+        jTextField19.setBounds(290, 190, 210, 30);
+
+        jLabel55.setBackground(new java.awt.Color(61, 136, 56));
+        jLabel55.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel55.setText("Agregar");
+        jLabel55.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel55.setOpaque(true);
+        Productos2.add(jLabel55);
+        jLabel55.setBounds(50, 60, 120, 40);
+
+        jLabel56.setBackground(new java.awt.Color(42, 61, 121));
+        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel56.setText("Modificar");
+        jLabel56.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel56.setOpaque(true);
+        Productos2.add(jLabel56);
+        jLabel56.setBounds(200, 60, 120, 40);
+
+        jLabel57.setBackground(new java.awt.Color(190, 41, 41));
+        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel57.setText("Eliminar");
+        jLabel57.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel57.setOpaque(true);
+        Productos2.add(jLabel57);
+        jLabel57.setBounds(350, 60, 100, 40);
+
+        jLabel58.setBackground(new java.awt.Color(15, 142, 27));
+        jLabel58.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel58.setText("Aceptar");
+        jLabel58.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel58.setOpaque(true);
+        Productos2.add(jLabel58);
+        jLabel58.setBounds(160, 300, 110, 40);
+
+        jLabel59.setBackground(new java.awt.Color(188, 14, 14));
+        jLabel59.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel59.setText("Cancelar");
+        jLabel59.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel59.setOpaque(true);
+        Productos2.add(jLabel59);
+        jLabel59.setBounds(300, 300, 110, 40);
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable4);
+
+        Productos2.add(jScrollPane4);
+        jScrollPane4.setBounds(540, 120, 440, 220);
+        Productos2.add(jTextField20);
+        jTextField20.setBounds(540, 60, 360, 40);
+
+        jLabel60.setBackground(new java.awt.Color(47, 153, 57));
+        jLabel60.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel60.setText("Buscar");
+        jLabel60.setOpaque(true);
+        Productos2.add(jLabel60);
+        jLabel60.setBounds(900, 60, 80, 40);
+
+        jLabel61.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel61.setText("Registro de Categorias");
+        Productos2.add(jLabel61);
+        jLabel61.setBounds(20, 370, 170, 17);
+
+        jLabel62.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel62.setOpaque(true);
+        Productos2.add(jLabel62);
+        jLabel62.setBounds(10, 360, 1180, 40);
+
+        Productos3.setForeground(new java.awt.Color(255, 255, 255));
+        Productos3.setLayout(null);
+
+        jLabel63.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel63.setText("Registro de Productos");
+        Productos3.add(jLabel63);
+        jLabel63.setBounds(20, 10, 170, 17);
+
+        jLabel64.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel64.setOpaque(true);
+        Productos3.add(jLabel64);
+        jLabel64.setBounds(0, 0, 1180, 40);
+
+        jLabel65.setText("Producto:");
+        Productos3.add(jLabel65);
+        jLabel65.setBounds(50, 130, 70, 14);
+        Productos3.add(jTextField21);
+        jTextField21.setBounds(50, 150, 210, 30);
+
+        jLabel66.setText("Precio:");
+        Productos3.add(jLabel66);
+        jLabel66.setBounds(50, 190, 60, 14);
+        Productos3.add(jTextField22);
+        jTextField22.setBounds(50, 210, 210, 30);
+
+        jLabel67.setText("Categoria:");
+        Productos3.add(jLabel67);
+        jLabel67.setBounds(50, 250, 60, 14);
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Productos3.add(jComboBox4);
+        jComboBox4.setBounds(50, 270, 210, 30);
+
+        jLabel68.setText("Unidad:");
+        Productos3.add(jLabel68);
+        jLabel68.setBounds(290, 130, 50, 14);
+        Productos3.add(jTextField23);
+        jTextField23.setBounds(290, 150, 210, 30);
+
+        jLabel69.setText("Imagen:");
+        Productos3.add(jLabel69);
+        jLabel69.setBounds(290, 190, 50, 14);
+        Productos3.add(jTextField24);
+        jTextField24.setBounds(290, 210, 210, 30);
+
+        jLabel70.setBackground(new java.awt.Color(61, 136, 56));
+        jLabel70.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel70.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel70.setText("Agregar");
+        jLabel70.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel70.setOpaque(true);
+        Productos3.add(jLabel70);
+        jLabel70.setBounds(50, 60, 120, 40);
+
+        jLabel71.setBackground(new java.awt.Color(42, 61, 121));
+        jLabel71.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel71.setText("Modificar");
+        jLabel71.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel71.setOpaque(true);
+        Productos3.add(jLabel71);
+        jLabel71.setBounds(200, 60, 120, 40);
+
+        jLabel72.setBackground(new java.awt.Color(190, 41, 41));
+        jLabel72.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel72.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel72.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel72.setText("Eliminar");
+        jLabel72.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel72.setOpaque(true);
+        Productos3.add(jLabel72);
+        jLabel72.setBounds(350, 60, 100, 40);
+
+        jLabel73.setBackground(new java.awt.Color(15, 142, 27));
+        jLabel73.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel73.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel73.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel73.setText("Aceptar");
+        jLabel73.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel73.setOpaque(true);
+        Productos3.add(jLabel73);
+        jLabel73.setBounds(160, 320, 110, 40);
+
+        jLabel74.setBackground(new java.awt.Color(188, 14, 14));
+        jLabel74.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel74.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel74.setText("Cancelar");
+        jLabel74.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel74.setOpaque(true);
+        Productos3.add(jLabel74);
+        jLabel74.setBounds(300, 320, 110, 40);
+
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(jTable5);
+
+        Productos3.add(jScrollPane5);
+        jScrollPane5.setBounds(540, 120, 440, 240);
+        Productos3.add(jTextField25);
+        jTextField25.setBounds(540, 60, 360, 40);
+
+        jLabel75.setBackground(new java.awt.Color(47, 153, 57));
+        jLabel75.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel75.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel75.setText("Buscar");
+        jLabel75.setOpaque(true);
+        Productos3.add(jLabel75);
+        jLabel75.setBounds(900, 60, 80, 40);
+
+        jLabel76.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel76.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel76.setText("Registro de Categorias");
+        Productos3.add(jLabel76);
+        jLabel76.setBounds(10, 390, 170, 17);
+
+        jLabel77.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel77.setOpaque(true);
+        Productos3.add(jLabel77);
+        jLabel77.setBounds(0, 380, 1180, 40);
+
+        Productos2.add(Productos3);
+        Productos3.setBounds(0, 0, 0, 0);
+
+        jLabel78.setBackground(new java.awt.Color(61, 136, 56));
+        jLabel78.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel78.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel78.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel78.setText("Agregar");
+        jLabel78.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel78.setOpaque(true);
+        Productos2.add(jLabel78);
+        jLabel78.setBounds(50, 410, 120, 40);
+
+        jLabel79.setBackground(new java.awt.Color(42, 61, 121));
+        jLabel79.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel79.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel79.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel79.setText("Modificar");
+        jLabel79.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel79.setOpaque(true);
+        Productos2.add(jLabel79);
+        jLabel79.setBounds(200, 410, 120, 40);
+
+        jLabel80.setBackground(new java.awt.Color(190, 41, 41));
+        jLabel80.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel80.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel80.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel80.setText("Eliminar");
+        jLabel80.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel80.setOpaque(true);
+        Productos2.add(jLabel80);
+        jLabel80.setBounds(350, 410, 100, 40);
+        Productos2.add(jTextField26);
+        jTextField26.setBounds(50, 490, 210, 30);
+
+        jLabel81.setText("Producto:");
+        Productos2.add(jLabel81);
+        jLabel81.setBounds(50, 470, 70, 14);
+
+        Productos.add(Productos2);
+        Productos2.setBounds(0, 0, 0, 0);
+
+        jLabel82.setBackground(new java.awt.Color(188, 14, 14));
+        jLabel82.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel82.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel82.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel82.setText("Cancelar");
+        jLabel82.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel82.setOpaque(true);
+        Productos.add(jLabel82);
+        jLabel82.setBounds(330, 540, 110, 40);
+
+        jLabel83.setBackground(new java.awt.Color(15, 142, 27));
+        jLabel83.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel83.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel83.setText("Aceptar");
+        jLabel83.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel83.setOpaque(true);
+        Productos.add(jLabel83);
+        jLabel83.setBounds(40, 540, 110, 40);
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable6);
+
+        Productos.add(jScrollPane6);
+        jScrollPane6.setBounds(540, 120, 580, 170);
+
+        jTable7.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane7.setViewportView(jTable7);
+
+        Productos.add(jScrollPane7);
+        jScrollPane7.setBounds(530, 460, 590, 130);
+        Productos.add(jTextField27);
+        jTextField27.setBounds(540, 60, 360, 40);
+
+        jLabel84.setBackground(new java.awt.Color(47, 153, 57));
+        jLabel84.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel84.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel84.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel84.setText("Buscar");
+        jLabel84.setOpaque(true);
+        Productos.add(jLabel84);
+        jLabel84.setBounds(900, 60, 80, 40);
+        Productos.add(jTextField28);
+        jTextField28.setBounds(530, 390, 490, 40);
+
+        jLabel85.setBackground(new java.awt.Color(47, 153, 57));
+        jLabel85.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel85.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel85.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel85.setText("Buscar");
+        jLabel85.setOpaque(true);
+        Productos.add(jLabel85);
+        jLabel85.setBounds(1020, 390, 100, 40);
+
+        EscritorioInterno.add(Productos, "card2");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1180, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 624, Short.MAX_VALUE)
         );
+
+        EscritorioInterno.add(jPanel1, "card7");
+
+        Ventas.setLayout(null);
+
+        jLabel102.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel102.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel102.setText("Panel Ventas");
+        Ventas.add(jLabel102);
+        jLabel102.setBounds(20, 10, 89, 17);
+
+        jLabel101.setBackground(new java.awt.Color(43, 87, 127));
+        jLabel101.setOpaque(true);
+        Ventas.add(jLabel101);
+        jLabel101.setBounds(0, 0, 1330, 40);
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Ventas.add(jComboBox7);
+        jComboBox7.setBounds(120, 90, 290, 30);
+
+        jLabel103.setText("Seleccione una Categoria:");
+        Ventas.add(jLabel103);
+        jLabel103.setBounds(120, 70, 200, 14);
+
+        jLabel104.setText("Filtrar:");
+        Ventas.add(jLabel104);
+        jLabel104.setBounds(490, 70, 110, 14);
+
+        jTextField33.setText("Corona Familiar");
+        Ventas.add(jTextField33);
+        jTextField33.setBounds(490, 90, 440, 40);
+
+        jLabel105.setBackground(new java.awt.Color(25, 155, 49));
+        jLabel105.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel105.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel105.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel105.setText("Buscar");
+        jLabel105.setOpaque(true);
+        Ventas.add(jLabel105);
+        jLabel105.setBounds(950, 90, 120, 40);
+
+        jLabel106.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel106.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/coronafamiliar.jpg"))); // NOI18N
+        jLabel106.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Ventas.add(jLabel106);
+        jLabel106.setBounds(120, 140, 290, 460);
+
+        jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel107.setText("Nombre:");
+        Ventas.add(jLabel107);
+        jLabel107.setBounds(490, 160, 60, 20);
+
+        jLabel108.setText("Corona Familiar");
+        Ventas.add(jLabel108);
+        jLabel108.setBounds(580, 160, 200, 20);
+
+        jLabel109.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel109.setText("Unidad:");
+        Ventas.add(jLabel109);
+        jLabel109.setBounds(490, 210, 70, 20);
+
+        jLabel110.setText("940 ml");
+        Ventas.add(jLabel110);
+        jLabel110.setBounds(580, 210, 200, 20);
+
+        jLabel111.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel111.setText("Cantidad:");
+        Ventas.add(jLabel111);
+        jLabel111.setBounds(490, 310, 70, 20);
+
+        jLabel112.setText("$50.00");
+        Ventas.add(jLabel112);
+        jLabel112.setBounds(580, 260, 200, 20);
+
+        jLabel113.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel113.setText("Precio:");
+        Ventas.add(jLabel113);
+        jLabel113.setBounds(490, 260, 70, 20);
+        Ventas.add(jTextField34);
+        jTextField34.setBounds(580, 310, 80, 20);
+
+        jLabel114.setBackground(new java.awt.Color(35, 150, 28));
+        jLabel114.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel114.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel114.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel114.setText("PAGAR");
+        jLabel114.setOpaque(true);
+        Ventas.add(jLabel114);
+        jLabel114.setBounds(490, 360, 170, 40);
+
+        EscritorioInterno.add(Ventas, "card5");
 
         javax.swing.GroupLayout JPrincipalLayout = new javax.swing.GroupLayout(JPrincipal);
         JPrincipal.setLayout(JPrincipalLayout);
@@ -328,13 +1659,22 @@ public class Dashboard extends javax.swing.JFrame {
     int w = 230;
 
     void Cambio(boolean Bo) {
-        FotoInicial.setVisible(Bo);
+//        FotoInicial.setVisible(Bo);
         LbUsuario.setVisible(Bo);
         LbProductos.setVisible(Bo);
         LbDama.setVisible(Bo);
         LbCaja.setVisible(Bo);
         LbVentas.setVisible(Bo);
     }
+    
+    void cambioPaneles(JPanel p) {
+        Productos.setVisible(false);
+        Caja.setVisible(false);
+        CervDama.setVisible(false);
+        Usuario.setVisible(false);
+        Ventas.setVisible(false);
+        p.setVisible(true);
+   }
 
     void Deslizable() {
         if (Des.equals("La")) {
@@ -372,22 +1712,24 @@ public class Dashboard extends javax.swing.JFrame {
         if (Des.equals("La")) {
             Deslizable();
         }
-        AddUser adU = new AddUser();
-        EscritorioInterno.add(adU);
+        cambioPaneles(Usuario);
+//        AddUser adU = new AddUser();
+//        EscritorioInterno.add(adU);
 //        Dimension desktopSize = EscritorioInterno.getSize();
 //        Dimension FrameSize = this.getSize();
 //        adU.setLocation(new Point(desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
 //        System.out.println((desktopSize.width - FrameSize.width)/2+"  "+ (desktopSize.height- FrameSize.height)/2);
-        adU.show();
+//        adU.show();
     }//GEN-LAST:event_LBUserMouseClicked
 
     private void LBproducMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBproducMouseClicked
         if (Des.equals("La")) {
             Deslizable();
         }
-        Category Ca = new Category();
-        EscritorioInterno.add(Ca);
-        Ca.setVisible(true);
+        cambioPaneles(Productos);
+//        Category Ca = new Category();
+//        EscritorioInterno.add(Ca);
+//        Ca.setVisible(true);
     }//GEN-LAST:event_LBproducMouseClicked
 
     private void lbXMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbXMouseClicked
@@ -413,6 +1755,38 @@ public class Dashboard extends javax.swing.JFrame {
     private void lbminimizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbminimizarMouseExited
         //  cb.HebntExitd(lbminimizar);
     }//GEN-LAST:event_lbminimizarMouseExited
+
+    private void LbUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbUsuarioMouseClicked
+        cambioPaneles(Usuario);
+    }//GEN-LAST:event_LbUsuarioMouseClicked
+
+    private void LbProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbProductosMouseClicked
+        cambioPaneles(Productos);
+    }//GEN-LAST:event_LbProductosMouseClicked
+
+    private void LBDamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBDamaMouseClicked
+        cambioPaneles(CervDama);
+    }//GEN-LAST:event_LBDamaMouseClicked
+
+    private void LbDamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbDamaMouseClicked
+        cambioPaneles(CervDama);
+    }//GEN-LAST:event_LbDamaMouseClicked
+
+    private void LBVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBVentasMouseClicked
+        cambioPaneles(Ventas);
+    }//GEN-LAST:event_LBVentasMouseClicked
+
+    private void LbVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbVentasMouseClicked
+        cambioPaneles(Ventas);
+    }//GEN-LAST:event_LbVentasMouseClicked
+
+    private void LBCajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBCajaMouseClicked
+        cambioPaneles(Caja);
+    }//GEN-LAST:event_LBCajaMouseClicked
+
+    private void LbCajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbCajaMouseClicked
+        cambioPaneles(Caja);
+    }//GEN-LAST:event_LbCajaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -451,8 +1825,9 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BntMenu1;
+    private javax.swing.JPanel Caja;
+    private javax.swing.JPanel CervDama;
     private javax.swing.JPanel EscritorioInterno;
-    private com.bolivia.label.CLabel FotoInicial;
     private javax.swing.JPanel Header;
     private javax.swing.JPanel JPrincipal;
     private javax.swing.JLabel LBCaja;
@@ -466,6 +1841,193 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel LbUsuario;
     private javax.swing.JLabel LbVentas;
     private javax.swing.JPanel MenuDesple;
+    private javax.swing.JPanel Productos;
+    private javax.swing.JPanel Productos1;
+    private javax.swing.JPanel Productos2;
+    private javax.swing.JPanel Productos3;
+    private javax.swing.JPanel Usuario;
+    private javax.swing.JPanel Ventas;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox7;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
+    private javax.swing.JLabel jLabel109;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
+    private javax.swing.JLabel jLabel111;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
+    private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
+    private javax.swing.JLabel jLabel118;
+    private javax.swing.JLabel jLabel119;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
+    private javax.swing.JTable jTable7;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField23;
+    private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField25;
+    private javax.swing.JTextField jTextField26;
+    private javax.swing.JTextField jTextField27;
+    private javax.swing.JTextField jTextField28;
+    private javax.swing.JTextField jTextField29;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField30;
+    private javax.swing.JTextField jTextField31;
+    private javax.swing.JTextField jTextField32;
+    private javax.swing.JTextField jTextField33;
+    private javax.swing.JTextField jTextField34;
+    private javax.swing.JTextField jTextField36;
+    private javax.swing.JTextField jTextField37;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel lbX;
     private javax.swing.JLabel lbminimizar;
     private javax.swing.JPanel pnlFuncinesPantallas;

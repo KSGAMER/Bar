@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import Controlador.Controlador;
+import java.text.SimpleDateFormat;
 import javax.swing.JPanel;
 
 /**
@@ -21,6 +23,15 @@ public class Dashboard extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         Iniciar();
     }
+    Controlador contro = new Controlador();
+   
+     void Limpiar(){
+         txtNombre.setText("");
+         txtApellidos.setText("");
+         txtUsuario.setText("");
+         JPContra.setText("");
+//         JDFecha.setDate(new Date(1997,11,23));
+     }
 
     void Iniciar() {
        // EscritorioInterno.setBorder(new ImagenFondo("../Imagen/bar2.jpg"));
@@ -60,11 +71,11 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtNombre = new javax.swing.JTextField();
+        txtApellidos = new javax.swing.JTextField();
+        txtUsuario = new javax.swing.JTextField();
+        JDFecha = new com.toedter.calendar.JDateChooser();
+        JPContra = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -72,8 +83,8 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        BtnCancelar = new javax.swing.JLabel();
+        BtnGuardar = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         Caja = new javax.swing.JPanel();
@@ -369,6 +380,7 @@ public class Dashboard extends javax.swing.JFrame {
         LbUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbUsuario.setForeground(new java.awt.Color(255, 255, 255));
         LbUsuario.setText("Usuario");
+        LbUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LbUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LbUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -388,6 +400,7 @@ public class Dashboard extends javax.swing.JFrame {
         LbProductos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbProductos.setForeground(new java.awt.Color(255, 255, 255));
         LbProductos.setText("Productos");
+        LbProductos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LbProductos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LbProductos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -407,6 +420,7 @@ public class Dashboard extends javax.swing.JFrame {
         LbDama.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbDama.setForeground(new java.awt.Color(255, 255, 255));
         LbDama.setText("Dama/Cerv");
+        LbDama.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LbDama.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LbDama.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -426,6 +440,7 @@ public class Dashboard extends javax.swing.JFrame {
         LbVentas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbVentas.setForeground(new java.awt.Color(255, 255, 255));
         LbVentas.setText("Ventas");
+        LbVentas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LbVentas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LbVentas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -445,6 +460,7 @@ public class Dashboard extends javax.swing.JFrame {
         LbCaja.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LbCaja.setForeground(new java.awt.Color(255, 255, 255));
         LbCaja.setText("Caja A/C");
+        LbCaja.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LbCaja.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LbCaja.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -542,16 +558,16 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel5.setText("Contraseña:");
         Usuario.add(jLabel5);
         jLabel5.setBounds(50, 380, 80, 14);
-        Usuario.add(jTextField1);
-        jTextField1.setBounds(50, 160, 240, 30);
-        Usuario.add(jTextField3);
-        jTextField3.setBounds(50, 220, 240, 30);
-        Usuario.add(jTextField2);
-        jTextField2.setBounds(50, 340, 240, 30);
-        Usuario.add(jDateChooser1);
-        jDateChooser1.setBounds(50, 280, 240, 30);
-        Usuario.add(jPasswordField1);
-        jPasswordField1.setBounds(50, 400, 240, 30);
+        Usuario.add(txtNombre);
+        txtNombre.setBounds(50, 160, 240, 30);
+        Usuario.add(txtApellidos);
+        txtApellidos.setBounds(50, 220, 240, 30);
+        Usuario.add(txtUsuario);
+        txtUsuario.setBounds(50, 340, 240, 30);
+        Usuario.add(JDFecha);
+        JDFecha.setBounds(50, 280, 240, 30);
+        Usuario.add(JPContra);
+        JPContra.setBounds(50, 400, 240, 30);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -610,31 +626,42 @@ public class Dashboard extends javax.swing.JFrame {
         Usuario.add(jLabel10);
         jLabel10.setBounds(350, 60, 100, 40);
 
-        jLabel11.setBackground(new java.awt.Color(188, 14, 14));
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Cancelar");
-        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel11.setOpaque(true);
-        Usuario.add(jLabel11);
-        jLabel11.setBounds(190, 470, 110, 40);
+        BtnCancelar.setBackground(new java.awt.Color(188, 14, 14));
+        BtnCancelar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BtnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnCancelar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnCancelar.setText("Cancelar");
+        BtnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnCancelar.setOpaque(true);
+        BtnCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnCancelarMouseClicked(evt);
+            }
+        });
+        Usuario.add(BtnCancelar);
+        BtnCancelar.setBounds(190, 470, 110, 40);
 
-        jLabel12.setBackground(new java.awt.Color(15, 142, 27));
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Aceptar");
-        jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel12.setOpaque(true);
-        Usuario.add(jLabel12);
-        jLabel12.setBounds(50, 470, 110, 40);
+        BtnGuardar.setBackground(new java.awt.Color(15, 142, 27));
+        BtnGuardar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BtnGuardar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnGuardar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnGuardar.setText("Aceptar");
+        BtnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnGuardar.setOpaque(true);
+        BtnGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnGuardarMouseClicked(evt);
+            }
+        });
+        Usuario.add(BtnGuardar);
+        BtnGuardar.setBounds(50, 470, 110, 40);
 
         jLabel15.setBackground(new java.awt.Color(47, 153, 57));
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Buscar");
+        jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel15.setOpaque(true);
         Usuario.add(jLabel15);
         jLabel15.setBounds(880, 60, 110, 40);
@@ -2051,6 +2078,16 @@ public class Dashboard extends javax.swing.JFrame {
         Venta.setVisible(false);
     }//GEN-LAST:event_jLabel114MouseClicked
 
+    private void BtnGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnGuardarMouseClicked
+        SimpleDateFormat fec = new SimpleDateFormat("YYYY-MM-dd");
+        String Fecha2 = fec.format(JDFecha.getDate());
+        contro.AgregarUser(txtNombre.getText(), txtApellidos.getText(), txtUsuario.getText(),JPContra.getText(),Fecha2,"Perfil");
+    }//GEN-LAST:event_BtnGuardarMouseClicked
+
+    private void BtnCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCancelarMouseClicked
+        Limpiar();
+    }//GEN-LAST:event_BtnCancelarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2088,11 +2125,15 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BntMenu1;
+    private javax.swing.JLabel BtnCancelar;
+    private javax.swing.JLabel BtnGuardar;
     private javax.swing.JPanel Caja;
     private javax.swing.JPanel CervDama;
     private javax.swing.JPanel Cobro;
     private javax.swing.JPanel EscritorioInterno;
     private javax.swing.JPanel Header;
+    private com.toedter.calendar.JDateChooser JDFecha;
+    private javax.swing.JPasswordField JPContra;
     private javax.swing.JPanel JPrincipal;
     private javax.swing.JLabel LBCaja;
     private javax.swing.JLabel LBDama;
@@ -2119,7 +2160,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -2132,7 +2172,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel112;
@@ -2143,7 +2182,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel117;
     private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel119;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
     private javax.swing.JLabel jLabel122;
@@ -2254,7 +2292,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -2272,7 +2309,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTable jTable6;
     private javax.swing.JTable jTable7;
     private javax.swing.JTable jTable8;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
@@ -2283,7 +2319,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
@@ -2294,7 +2329,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
     private javax.swing.JTextField jTextField32;
@@ -2315,5 +2349,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lbX;
     private javax.swing.JLabel lbminimizar;
     private javax.swing.JPanel pnlFuncinesPantallas;
+    private javax.swing.JTextField txtApellidos;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

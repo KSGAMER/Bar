@@ -7,6 +7,7 @@ package Vista;
 
 import Controlador.Controlador;
 import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -24,17 +25,17 @@ public class Dashboard extends javax.swing.JFrame {
         Iniciar();
     }
     Controlador contro = new Controlador();
-   
-     void Limpiar(){
-         txtNombre.setText("");
-         txtApellidos.setText("");
-         txtUsuario.setText("");
-         JPContra.setText("");
+
+    void Limpiar() {
+        txtNombre.setText("");
+        txtApellidos.setText("");
+        txtUsuario.setText("");
+        JPContra.setText("");
 //         JDFecha.setDate(new Date(1997,11,23));
-     }
+    }
 
     void Iniciar() {
-       // EscritorioInterno.setBorder(new ImagenFondo("../Imagen/bar2.jpg"));
+        // EscritorioInterno.setBorder(new ImagenFondo("../Imagen/bar2.jpg"));
         Deslizable();
     }
 
@@ -79,14 +80,11 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        TbUsuario = new javax.swing.JTable();
+        LBModificar = new javax.swing.JLabel();
+        LBEliminar = new javax.swing.JLabel();
         BtnCancelar = new javax.swing.JLabel();
         BtnGuardar = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
         Caja = new javax.swing.JPanel();
         jLabel87 = new javax.swing.JLabel();
         jLabel86 = new javax.swing.JLabel();
@@ -580,7 +578,7 @@ public class Dashboard extends javax.swing.JFrame {
         Usuario.add(jLabel7);
         jLabel7.setBounds(0, 0, 1340, 40);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TbUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -591,40 +589,40 @@ public class Dashboard extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TbUsuario);
 
         Usuario.add(jScrollPane1);
-        jScrollPane1.setBounds(350, 140, 640, 370);
+        jScrollPane1.setBounds(350, 50, 640, 460);
 
-        jLabel8.setBackground(new java.awt.Color(61, 136, 56));
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Agregar");
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel8.setOpaque(true);
-        Usuario.add(jLabel8);
-        jLabel8.setBounds(50, 60, 120, 40);
+        LBModificar.setBackground(new java.awt.Color(42, 61, 121));
+        LBModificar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LBModificar.setForeground(new java.awt.Color(255, 255, 255));
+        LBModificar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LBModificar.setText("Modificar");
+        LBModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LBModificar.setOpaque(true);
+        LBModificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LBModificarMouseClicked(evt);
+            }
+        });
+        Usuario.add(LBModificar);
+        LBModificar.setBounds(50, 60, 120, 40);
 
-        jLabel9.setBackground(new java.awt.Color(42, 61, 121));
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Modificar");
-        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel9.setOpaque(true);
-        Usuario.add(jLabel9);
-        jLabel9.setBounds(200, 60, 120, 40);
-
-        jLabel10.setBackground(new java.awt.Color(190, 41, 41));
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Eliminar");
-        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel10.setOpaque(true);
-        Usuario.add(jLabel10);
-        jLabel10.setBounds(350, 60, 100, 40);
+        LBEliminar.setBackground(new java.awt.Color(190, 41, 41));
+        LBEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LBEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        LBEliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LBEliminar.setText("Eliminar");
+        LBEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LBEliminar.setOpaque(true);
+        LBEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LBEliminarMouseClicked(evt);
+            }
+        });
+        Usuario.add(LBEliminar);
+        LBEliminar.setBounds(200, 60, 100, 40);
 
         BtnCancelar.setBackground(new java.awt.Color(188, 14, 14));
         BtnCancelar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -655,18 +653,6 @@ public class Dashboard extends javax.swing.JFrame {
         });
         Usuario.add(BtnGuardar);
         BtnGuardar.setBounds(50, 470, 110, 40);
-
-        jLabel15.setBackground(new java.awt.Color(47, 153, 57));
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Buscar");
-        jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel15.setOpaque(true);
-        Usuario.add(jLabel15);
-        jLabel15.setBounds(880, 60, 110, 40);
-        Usuario.add(jTextField4);
-        jTextField4.setBounds(520, 60, 370, 40);
 
         EscritorioInterno.add(Usuario, "card3");
 
@@ -1937,6 +1923,7 @@ public class Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
         String Des = "La";
     int w = 230;
+    String GuarTipo = "Ag";
 
     void Cambio(boolean Bo) {
 //        FotoInicial.setVisible(Bo);
@@ -1946,7 +1933,7 @@ public class Dashboard extends javax.swing.JFrame {
         LbCaja.setVisible(Bo);
         LbVentas.setVisible(Bo);
     }
-    
+
     void cambioPaneles(JPanel p) {
         Productos.setVisible(false);
         Caja.setVisible(false);
@@ -1954,33 +1941,20 @@ public class Dashboard extends javax.swing.JFrame {
         Usuario.setVisible(false);
         Ventas.setVisible(false);
         p.setVisible(true);
-   }
+    }
 
     void Deslizable() {
         if (Des.equals("La")) {
-//            double width = MenuDesple.getWidth() * 0.80;
-//            System.out.println(width);
             MenuDesple.setSize(w, MenuDesple.getHeight());
             EscritorioInterno.setSize(EscritorioInterno.getWidth() - w, EscritorioInterno.getHeight());
-//            System.out.println(EscritorioInterno.getX() +" "+ w);
             EscritorioInterno.setLocation(EscritorioInterno.getX() + w, EscritorioInterno.getY());
-//            System.out.println(EscritorioInterno.getWidth() - w+" "+ EscritorioInterno.getHeight());
-//            System.out.println(EscritorioInterno.getX() + w+" lo "+ EscritorioInterno.getY());
-//            
-//            System.out.println("__________________________________________________________________________");
             Des = "Oc";
             Cambio(false);
         } else if (Des.equals("Oc")) {
-//
             MenuDesple.setSize(w + w, MenuDesple.getHeight());
             EscritorioInterno.setSize(EscritorioInterno.getWidth() + w, EscritorioInterno.getHeight());
-//            System.out.println(EscritorioInterno.getX() +" "+ w);
             EscritorioInterno.setLocation(EscritorioInterno.getX() - w, EscritorioInterno.getY());
             Des = "La";
-//            System.out.println(EscritorioInterno.getWidth() - w+" "+ EscritorioInterno.getHeight());
-//            System.out.println(EscritorioInterno.getX() + w+" lo "+ EscritorioInterno.getY());
-//            
-//            System.out.println("__________________________________________________________________________");
             Cambio(true);
         }
     }
@@ -1992,14 +1966,8 @@ public class Dashboard extends javax.swing.JFrame {
         if (Des.equals("La")) {
             Deslizable();
         }
+        TbUsuario.setModel(contro.TablaUsuario());
         cambioPaneles(Usuario);
-//        AddUser adU = new AddUser();
-//        EscritorioInterno.add(adU);
-//        Dimension desktopSize = EscritorioInterno.getSize();
-//        Dimension FrameSize = this.getSize();
-//        adU.setLocation(new Point(desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
-//        System.out.println((desktopSize.width - FrameSize.width)/2+"  "+ (desktopSize.height- FrameSize.height)/2);
-//        adU.show();
     }//GEN-LAST:event_LBUserMouseClicked
 
     private void LBproducMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBproducMouseClicked
@@ -2007,9 +1975,6 @@ public class Dashboard extends javax.swing.JFrame {
             Deslizable();
         }
         cambioPaneles(Productos);
-//        Category Ca = new Category();
-//        EscritorioInterno.add(Ca);
-//        Ca.setVisible(true);
     }//GEN-LAST:event_LBproducMouseClicked
 
     private void lbXMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbXMouseClicked
@@ -2037,34 +2002,59 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_lbminimizarMouseExited
 
     private void LbUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbUsuarioMouseClicked
+        if (Des.equals("La")) {
+            Deslizable();
+        }
+        TbUsuario.setModel(contro.TablaUsuario());
         cambioPaneles(Usuario);
     }//GEN-LAST:event_LbUsuarioMouseClicked
 
     private void LbProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbProductosMouseClicked
+        if (Des.equals("La")) {
+            Deslizable();
+        }
         cambioPaneles(Productos);
     }//GEN-LAST:event_LbProductosMouseClicked
 
     private void LBDamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBDamaMouseClicked
+        if (Des.equals("La")) {
+            Deslizable();
+        }
         cambioPaneles(CervDama);
     }//GEN-LAST:event_LBDamaMouseClicked
 
     private void LbDamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbDamaMouseClicked
+        if (Des.equals("La")) {
+            Deslizable();
+        }
         cambioPaneles(CervDama);
     }//GEN-LAST:event_LbDamaMouseClicked
 
     private void LBVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBVentasMouseClicked
+        if (Des.equals("La")) {
+            Deslizable();
+        }
         cambioPaneles(Ventas);
     }//GEN-LAST:event_LBVentasMouseClicked
 
     private void LbVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbVentasMouseClicked
+        if (Des.equals("La")) {
+            Deslizable();
+        }
         cambioPaneles(Ventas);
     }//GEN-LAST:event_LbVentasMouseClicked
 
     private void LBCajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBCajaMouseClicked
+        if (Des.equals("La")) {
+            Deslizable();
+        }
         cambioPaneles(Caja);
     }//GEN-LAST:event_LBCajaMouseClicked
 
     private void LbCajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbCajaMouseClicked
+        if (Des.equals("La")) {
+            Deslizable();
+        }
         cambioPaneles(Caja);
     }//GEN-LAST:event_LbCajaMouseClicked
 
@@ -2077,16 +2067,46 @@ public class Dashboard extends javax.swing.JFrame {
         Cobro.setVisible(true);
         Venta.setVisible(false);
     }//GEN-LAST:event_jLabel114MouseClicked
-
+    String idMod;
     private void BtnGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnGuardarMouseClicked
-        SimpleDateFormat fec = new SimpleDateFormat("YYYY-MM-dd");
-        String Fecha2 = fec.format(JDFecha.getDate());
-        contro.AgregarUser(txtNombre.getText(), txtApellidos.getText(), txtUsuario.getText(),JPContra.getText(),Fecha2,"Perfil");
+        if (GuarTipo.equals("Ag")) {
+            SimpleDateFormat fec = new SimpleDateFormat("YYYY-MM-dd");
+            String Fecha2 = fec.format(JDFecha.getDate());
+            contro.AgregarUser(txtNombre.getText(), txtApellidos.getText(), txtUsuario.getText(), JPContra.getText(), Fecha2, "Perfil");
+            Limpiar();
+            TbUsuario.setModel(contro.TablaUsuario());
+        }else if(GuarTipo.equals("Mo")){
+           
+            contro.ModificarUser(idMod,txtUsuario.getText(),txtNombre.getText(),txtApellidos.getText(),JPContra.getText());
+            idMod = null;
+            Limpiar();
+            TbUsuario.setModel(contro.TablaUsuario());
+        }
     }//GEN-LAST:event_BtnGuardarMouseClicked
 
     private void BtnCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCancelarMouseClicked
         Limpiar();
     }//GEN-LAST:event_BtnCancelarMouseClicked
+
+    private void LBModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBModificarMouseClicked
+        int file = TbUsuario.getSelectedRow();
+        GuarTipo = "Mo";
+        if (file == -1) {
+            JOptionPane.showMessageDialog(null, "Seleccione un registro primero");
+        } else {
+            txtNombre.setText(TbUsuario.getValueAt(file,0).toString());
+            txtApellidos.setText(TbUsuario.getValueAt(file,1).toString());
+            txtUsuario.setText(TbUsuario.getValueAt(file,2).toString());
+            idMod =contro.id(txtUsuario.getText(), txtNombre.getText());
+        }
+    }//GEN-LAST:event_LBModificarMouseClicked
+
+    private void LBEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBEliminarMouseClicked
+        // UPDATE `usuario` SET `status` = '0' WHERE `usuario`.`id` = 7;
+        contro.EliminarUser(idMod);
+        TbUsuario.setModel(contro.TablaUsuario());
+        Limpiar();
+    }//GEN-LAST:event_LBEliminarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -2137,6 +2157,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel JPrincipal;
     private javax.swing.JLabel LBCaja;
     private javax.swing.JLabel LBDama;
+    private javax.swing.JLabel LBEliminar;
+    private javax.swing.JLabel LBModificar;
     private javax.swing.JLabel LBUser;
     private javax.swing.JLabel LBVentas;
     private javax.swing.JLabel LBproduc;
@@ -2150,6 +2172,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel Productos1;
     private javax.swing.JPanel Productos2;
     private javax.swing.JPanel Productos3;
+    private javax.swing.JTable TbUsuario;
     private javax.swing.JPanel Usuario;
     private javax.swing.JPanel Venta;
     private javax.swing.JPanel Ventas;
@@ -2161,7 +2184,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
@@ -2197,7 +2219,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel131;
     private javax.swing.JLabel jLabel132;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -2268,7 +2289,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
@@ -2279,7 +2299,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
@@ -2301,7 +2320,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
@@ -2339,7 +2357,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField37;
     private javax.swing.JTextField jTextField38;
     private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;

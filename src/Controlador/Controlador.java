@@ -8,6 +8,7 @@ package Controlador;
 import Modelo.Consultas;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
@@ -22,11 +23,92 @@ public class Controlador {
     }
 
     Consultas con = new Consultas();
+    //Metodos de Modulo de Categoria
+
+    public DefaultTableModel TablaCategoria() {
+
+        String titulos[] = {"Nombre"};
+        String[] registros = new String[1];
+        DefaultTableModel model = new DefaultTableModel(null, titulos);
+        ResultSet Info = con.TablaUsu("SELECT name FROM categoria  where status = 1");
+        try {
+            while (Info.next()) {
+                registros[0] = Info.getString(1);
+                model.addRow(registros);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return model;
+    }
+
+    //Metodos de Modulo de Producto
+    public String idPrC(String Nombre) {
+        String id = null;
+        ResultSet rs = con.consultar("id", "categoria", " name = '" + Nombre + "' and status = 1");
+        try {
+            while (rs.next()) {
+                id = rs.getString(1);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id;
+    }
+
+    public void ModificarProduc(String nombre, String precio, String unidad, String imagen, String cate) {
+        String id = idPrC(cate);
+        con.ModificarPr("name = '" + nombre + "',price='" + precio + "', unity='" + unidad + "', image='" + imagen + "',idCategory='" + id + "'");
+    }
+
+    public void EliminarPro(String Nombre, String Unidad){
+        con.EliminarPro("Update producto set status = 0 where name ='"+Nombre+"' and unity='"+Unidad+"'");
+    }
+    public void AgregarProduc(String nombre, String precio, String unidad, String imagen, String cate) {
+        String id = idPrC(cate);
+        con.AgregarPro(nombre, precio, unidad, imagen, id);
+    }
+
+    public ArrayList ComboxPro() {
+        ArrayList array = new ArrayList();
+        ResultSet Info = con.TablaUsu("SELECT name FROM categoria  where status = 1");
+        try {
+            while (Info.next()) {
+                array.add(Info.getString(1));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return array;
+    }
+
+    public DefaultTableModel TablaProductos() {
+
+        //SELECT name,lastname,username FROM usuario
+        String titulos[] = {"Nombre", "Precio", "Categoria", "Unidad"};
+        String[] registros = new String[4];
+        DefaultTableModel model = new DefaultTableModel(null, titulos);
+        ResultSet Info = con.TablaUsu("SELECT p.name,p.price,ca.name as Category, unity FROM producto as p inner join categoria as ca on p.idCategory = ca.id  where p.status = 1");
+        try {
+            while (Info.next()) {
+                registros[0] = Info.getString(1);
+                registros[1] = Info.getString(2);
+                registros[2] = Info.getString(3);
+                registros[3] = Info.getString(4);
+
+                model.addRow(registros);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return model;
+    }
 
     //Eliminar Usar
-    public void EliminarUser(String id){
-        con.EliminarUser("UPDATE usuario SET status = '0' WHERE id = "+id);
+    public void EliminarUser(String id) {
+        con.EliminarUser("UPDATE usuario SET status = '0' WHERE id = " + id);
     }
+
     public DefaultTableModel TablaUsuario() {
 
         //SELECT name,lastname,username FROM usuario
@@ -39,7 +121,7 @@ public class Controlador {
                 registros[0] = Info.getString(1);
                 registros[1] = Info.getString(2);
                 registros[2] = Info.getString(3);
-               
+
                 model.addRow(registros);
             }
         } catch (SQLException ex) {
@@ -61,9 +143,13 @@ public class Controlador {
         return id;
     }
 
-    public void ModificarUser(String id, String Usuario,String Nombre, String Apellido,String Pass) {
+    public void ModificarUser(String id, String Usuario, String Nombre, String Apellido, String Pass) {
         //name` = 'Praxx' WHERE `usuario`.`id` = 7
-        con.ModificarUser("username = '"+Usuario+"', name ='"+Nombre+"',lastname='"+Apellido+"',`password` = MD5('"+Pass+"')WHERE id ="+id);
+        if(Pass != null){
+            con.ModificarUser("username = '" + Usuario + "', name ='" + Nombre + "',lastname='" + Apellido + "',`password` = MD5('" + Pass + "') WHERE id =" + id);
+        }else{
+            con.ModificarUser("username = '" + Usuario + "', name ='" + Nombre + "',lastname='" + Apellido + "' WHERE id =" + id);
+        }
     }
 
     public void AgregarUser(String nombre, String Apellido, String Usuario, String Contrase, String Fecha, String Estado) {

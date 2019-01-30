@@ -7,6 +7,7 @@ package Vista;
 
 import Controlador.Controlador;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -32,6 +33,25 @@ public class Dashboard extends javax.swing.JFrame {
         txtUsuario.setText("");
         JPContra.setText("");
 //         JDFecha.setDate(new Date(1997,11,23));
+    }
+    void LimpiarProducto() {
+        txtRegisBuscar.setText("");
+        txtRegisImagen.setText("");
+        txtRegisPrecio.setText("");
+        txtRegisProducto.setText("");
+        txtRegisUnidad.setText("");
+        JCRegisCategoria.setSelectedIndex(0);
+    }
+    void LimpiarCategoria() {
+        txtCateDescipcion.setText("");
+        txtCateBuscar.setText("");
+    }
+    void CargarBoxProduc(){
+        JCRegisCategoria.removeAllItems();
+        ArrayList ar = contro.ComboxPro();
+        for(int  i=0; i<ar.size(); i++){
+            JCRegisCategoria.addItem(ar.get(i).toString());
+        }
     }
 
     void Iniciar() {
@@ -123,22 +143,21 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtRegisProducto = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        txtRegisPrecio = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        JCRegisCategoria = new javax.swing.JComboBox<>();
         jLabel19 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        txtRegisUnidad = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
+        txtRegisImagen = new javax.swing.JTextField();
+        LbRegisModificar = new javax.swing.JLabel();
+        LbRegisEliminar = new javax.swing.JLabel();
+        LbRegisAceptar = new javax.swing.JLabel();
+        LbRegisCancelar = new javax.swing.JLabel();
+        txtRegisBuscar = new javax.swing.JTextField();
+        LbRegisBuscar = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         Productos1 = new javax.swing.JPanel();
@@ -165,10 +184,9 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
+        LbCateModificar = new javax.swing.JLabel();
+        LbCateEliminar = new javax.swing.JLabel();
+        txtCateDescipcion = new javax.swing.JTextField();
         jLabel47 = new javax.swing.JLabel();
         Productos2 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
@@ -223,16 +241,16 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel80 = new javax.swing.JLabel();
         jTextField26 = new javax.swing.JTextField();
         jLabel81 = new javax.swing.JLabel();
-        jLabel82 = new javax.swing.JLabel();
-        jLabel83 = new javax.swing.JLabel();
+        LbCateCancelar = new javax.swing.JLabel();
+        LbCateAceptar = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTable6 = new javax.swing.JTable();
+        TbRegisRProductos = new javax.swing.JTable();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTable7 = new javax.swing.JTable();
+        TbCateCategoria = new javax.swing.JTable();
         jTextField27 = new javax.swing.JTextField();
         jLabel84 = new javax.swing.JLabel();
-        jTextField28 = new javax.swing.JTextField();
-        jLabel85 = new javax.swing.JLabel();
+        txtCateBuscar = new javax.swing.JTextField();
+        LbCateBuscar = new javax.swing.JLabel();
         Ventas = new javax.swing.JPanel();
         jLabel102 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
@@ -895,95 +913,105 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel16.setText("Producto:");
         Productos.add(jLabel16);
         jLabel16.setBounds(50, 110, 70, 14);
-        Productos.add(jTextField5);
-        jTextField5.setBounds(50, 130, 210, 30);
+        Productos.add(txtRegisProducto);
+        txtRegisProducto.setBounds(50, 130, 210, 30);
 
         jLabel17.setText("Precio:");
         Productos.add(jLabel17);
         jLabel17.setBounds(50, 170, 60, 14);
-        Productos.add(jTextField6);
-        jTextField6.setBounds(50, 190, 210, 30);
+        Productos.add(txtRegisPrecio);
+        txtRegisPrecio.setBounds(50, 190, 210, 30);
 
         jLabel18.setText("Categoria:");
         Productos.add(jLabel18);
         jLabel18.setBounds(50, 230, 60, 14);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Productos.add(jComboBox1);
-        jComboBox1.setBounds(50, 250, 210, 30);
+        JCRegisCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Productos.add(JCRegisCategoria);
+        JCRegisCategoria.setBounds(50, 250, 210, 30);
 
         jLabel19.setText("Unidad:");
         Productos.add(jLabel19);
         jLabel19.setBounds(290, 110, 50, 14);
-        Productos.add(jTextField7);
-        jTextField7.setBounds(290, 130, 210, 30);
+        Productos.add(txtRegisUnidad);
+        txtRegisUnidad.setBounds(290, 130, 210, 30);
 
         jLabel20.setText("Imagen:");
         Productos.add(jLabel20);
         jLabel20.setBounds(290, 170, 50, 14);
-        Productos.add(jTextField8);
-        jTextField8.setBounds(290, 190, 210, 30);
+        Productos.add(txtRegisImagen);
+        txtRegisImagen.setBounds(290, 190, 210, 30);
 
-        jLabel21.setBackground(new java.awt.Color(61, 136, 56));
-        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("Agregar");
-        jLabel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel21.setOpaque(true);
-        Productos.add(jLabel21);
-        jLabel21.setBounds(50, 60, 120, 40);
+        LbRegisModificar.setBackground(new java.awt.Color(42, 61, 121));
+        LbRegisModificar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbRegisModificar.setForeground(new java.awt.Color(255, 255, 255));
+        LbRegisModificar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbRegisModificar.setText("Modificar");
+        LbRegisModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LbRegisModificar.setOpaque(true);
+        LbRegisModificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbRegisModificarMouseClicked(evt);
+            }
+        });
+        Productos.add(LbRegisModificar);
+        LbRegisModificar.setBounds(50, 60, 120, 40);
 
-        jLabel22.setBackground(new java.awt.Color(42, 61, 121));
-        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("Modificar");
-        jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel22.setOpaque(true);
-        Productos.add(jLabel22);
-        jLabel22.setBounds(200, 60, 120, 40);
+        LbRegisEliminar.setBackground(new java.awt.Color(190, 41, 41));
+        LbRegisEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbRegisEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        LbRegisEliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbRegisEliminar.setText("Eliminar");
+        LbRegisEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LbRegisEliminar.setOpaque(true);
+        LbRegisEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbRegisEliminarMouseClicked(evt);
+            }
+        });
+        Productos.add(LbRegisEliminar);
+        LbRegisEliminar.setBounds(350, 60, 100, 40);
 
-        jLabel23.setBackground(new java.awt.Color(190, 41, 41));
-        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel23.setText("Eliminar");
-        jLabel23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel23.setOpaque(true);
-        Productos.add(jLabel23);
-        jLabel23.setBounds(350, 60, 100, 40);
+        LbRegisAceptar.setBackground(new java.awt.Color(15, 142, 27));
+        LbRegisAceptar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbRegisAceptar.setForeground(new java.awt.Color(255, 255, 255));
+        LbRegisAceptar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbRegisAceptar.setText("Aceptar");
+        LbRegisAceptar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LbRegisAceptar.setOpaque(true);
+        LbRegisAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbRegisAceptarMouseClicked(evt);
+            }
+        });
+        Productos.add(LbRegisAceptar);
+        LbRegisAceptar.setBounds(290, 240, 90, 40);
 
-        jLabel24.setBackground(new java.awt.Color(15, 142, 27));
-        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel24.setText("Aceptar");
-        jLabel24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel24.setOpaque(true);
-        Productos.add(jLabel24);
-        jLabel24.setBounds(290, 240, 90, 40);
+        LbRegisCancelar.setBackground(new java.awt.Color(188, 14, 14));
+        LbRegisCancelar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbRegisCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        LbRegisCancelar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbRegisCancelar.setText("Cancelar");
+        LbRegisCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LbRegisCancelar.setOpaque(true);
+        LbRegisCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbRegisCancelarMouseClicked(evt);
+            }
+        });
+        Productos.add(LbRegisCancelar);
+        LbRegisCancelar.setBounds(410, 240, 90, 40);
+        Productos.add(txtRegisBuscar);
+        txtRegisBuscar.setBounds(540, 60, 480, 40);
 
-        jLabel25.setBackground(new java.awt.Color(188, 14, 14));
-        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setText("Cancelar");
-        jLabel25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel25.setOpaque(true);
-        Productos.add(jLabel25);
-        jLabel25.setBounds(410, 240, 90, 40);
-        Productos.add(jTextField9);
-        jTextField9.setBounds(540, 60, 480, 40);
-
-        jLabel26.setBackground(new java.awt.Color(47, 153, 57));
-        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("Buscar");
-        jLabel26.setOpaque(true);
-        Productos.add(jLabel26);
-        jLabel26.setBounds(1020, 60, 100, 40);
+        LbRegisBuscar.setBackground(new java.awt.Color(47, 153, 57));
+        LbRegisBuscar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbRegisBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        LbRegisBuscar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbRegisBuscar.setText("Buscar");
+        LbRegisBuscar.setOpaque(true);
+        Productos.add(LbRegisBuscar);
+        LbRegisBuscar.setBounds(1020, 60, 100, 40);
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
@@ -1133,37 +1161,27 @@ public class Dashboard extends javax.swing.JFrame {
         Productos.add(Productos1);
         Productos1.setBounds(0, 0, 0, 0);
 
-        jLabel44.setBackground(new java.awt.Color(61, 136, 56));
-        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel44.setText("Agregar");
-        jLabel44.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel44.setOpaque(true);
-        Productos.add(jLabel44);
-        jLabel44.setBounds(40, 390, 120, 40);
+        LbCateModificar.setBackground(new java.awt.Color(42, 61, 121));
+        LbCateModificar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbCateModificar.setForeground(new java.awt.Color(255, 255, 255));
+        LbCateModificar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbCateModificar.setText("Modificar");
+        LbCateModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LbCateModificar.setOpaque(true);
+        Productos.add(LbCateModificar);
+        LbCateModificar.setBounds(30, 390, 120, 40);
 
-        jLabel45.setBackground(new java.awt.Color(42, 61, 121));
-        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel45.setText("Modificar");
-        jLabel45.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel45.setOpaque(true);
-        Productos.add(jLabel45);
-        jLabel45.setBounds(190, 390, 120, 40);
-
-        jLabel46.setBackground(new java.awt.Color(190, 41, 41));
-        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel46.setText("Eliminar");
-        jLabel46.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel46.setOpaque(true);
-        Productos.add(jLabel46);
-        jLabel46.setBounds(340, 390, 100, 40);
-        Productos.add(jTextField15);
-        jTextField15.setBounds(40, 480, 400, 30);
+        LbCateEliminar.setBackground(new java.awt.Color(190, 41, 41));
+        LbCateEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbCateEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        LbCateEliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbCateEliminar.setText("Eliminar");
+        LbCateEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LbCateEliminar.setOpaque(true);
+        Productos.add(LbCateEliminar);
+        LbCateEliminar.setBounds(340, 390, 100, 40);
+        Productos.add(txtCateDescipcion);
+        txtCateDescipcion.setBounds(40, 480, 400, 30);
 
         jLabel47.setText("Descripción:");
         Productos.add(jLabel47);
@@ -1479,27 +1497,27 @@ public class Dashboard extends javax.swing.JFrame {
         Productos.add(Productos2);
         Productos2.setBounds(0, 0, 0, 0);
 
-        jLabel82.setBackground(new java.awt.Color(188, 14, 14));
-        jLabel82.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel82.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel82.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel82.setText("Cancelar");
-        jLabel82.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel82.setOpaque(true);
-        Productos.add(jLabel82);
-        jLabel82.setBounds(330, 540, 110, 40);
+        LbCateCancelar.setBackground(new java.awt.Color(188, 14, 14));
+        LbCateCancelar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbCateCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        LbCateCancelar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbCateCancelar.setText("Cancelar");
+        LbCateCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LbCateCancelar.setOpaque(true);
+        Productos.add(LbCateCancelar);
+        LbCateCancelar.setBounds(330, 540, 110, 40);
 
-        jLabel83.setBackground(new java.awt.Color(15, 142, 27));
-        jLabel83.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel83.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel83.setText("Aceptar");
-        jLabel83.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel83.setOpaque(true);
-        Productos.add(jLabel83);
-        jLabel83.setBounds(40, 540, 110, 40);
+        LbCateAceptar.setBackground(new java.awt.Color(15, 142, 27));
+        LbCateAceptar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbCateAceptar.setForeground(new java.awt.Color(255, 255, 255));
+        LbCateAceptar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbCateAceptar.setText("Aceptar");
+        LbCateAceptar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LbCateAceptar.setOpaque(true);
+        Productos.add(LbCateAceptar);
+        LbCateAceptar.setBounds(40, 540, 110, 40);
 
-        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+        TbRegisRProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1510,12 +1528,12 @@ public class Dashboard extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane6.setViewportView(jTable6);
+        jScrollPane6.setViewportView(TbRegisRProductos);
 
         Productos.add(jScrollPane6);
         jScrollPane6.setBounds(540, 120, 580, 170);
 
-        jTable7.setModel(new javax.swing.table.DefaultTableModel(
+        TbCateCategoria.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1526,7 +1544,7 @@ public class Dashboard extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane7.setViewportView(jTable7);
+        jScrollPane7.setViewportView(TbCateCategoria);
 
         Productos.add(jScrollPane7);
         jScrollPane7.setBounds(530, 460, 590, 130);
@@ -1541,17 +1559,17 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel84.setOpaque(true);
         Productos.add(jLabel84);
         jLabel84.setBounds(900, 60, 80, 40);
-        Productos.add(jTextField28);
-        jTextField28.setBounds(530, 390, 490, 40);
+        Productos.add(txtCateBuscar);
+        txtCateBuscar.setBounds(530, 390, 490, 40);
 
-        jLabel85.setBackground(new java.awt.Color(47, 153, 57));
-        jLabel85.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel85.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel85.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel85.setText("Buscar");
-        jLabel85.setOpaque(true);
-        Productos.add(jLabel85);
-        jLabel85.setBounds(1020, 390, 100, 40);
+        LbCateBuscar.setBackground(new java.awt.Color(47, 153, 57));
+        LbCateBuscar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LbCateBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        LbCateBuscar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LbCateBuscar.setText("Buscar");
+        LbCateBuscar.setOpaque(true);
+        Productos.add(LbCateBuscar);
+        LbCateBuscar.setBounds(1020, 390, 100, 40);
 
         EscritorioInterno.add(Productos, "card2");
 
@@ -1921,10 +1939,15 @@ public class Dashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-        String Des = "La";
+    String Des = "La";
     int w = 230;
+    //Variables de Tipo
     String GuarTipo = "Ag";
-
+    String GuarTipoPro = "Ag";
+    String GuarTipoCate = "Ag";
+    String idMCate;
+    String idMod;
+    String idMProd;
     void Cambio(boolean Bo) {
 //        FotoInicial.setVisible(Bo);
         LbUsuario.setVisible(Bo);
@@ -1975,6 +1998,9 @@ public class Dashboard extends javax.swing.JFrame {
             Deslizable();
         }
         cambioPaneles(Productos);
+        TbRegisRProductos.setModel(contro.TablaProductos());
+        TbCateCategoria.setModel(contro.TablaCategoria());
+        CargarBoxProduc();
     }//GEN-LAST:event_LBproducMouseClicked
 
     private void lbXMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbXMouseClicked
@@ -2014,6 +2040,9 @@ public class Dashboard extends javax.swing.JFrame {
             Deslizable();
         }
         cambioPaneles(Productos);
+        TbRegisRProductos.setModel(contro.TablaProductos());
+        TbCateCategoria.setModel(contro.TablaCategoria());
+        CargarBoxProduc();
     }//GEN-LAST:event_LbProductosMouseClicked
 
     private void LBDamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LBDamaMouseClicked
@@ -2067,7 +2096,7 @@ public class Dashboard extends javax.swing.JFrame {
         Cobro.setVisible(true);
         Venta.setVisible(false);
     }//GEN-LAST:event_jLabel114MouseClicked
-    String idMod;
+    
     private void BtnGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnGuardarMouseClicked
         if (GuarTipo.equals("Ag")) {
             SimpleDateFormat fec = new SimpleDateFormat("YYYY-MM-dd");
@@ -2107,6 +2136,47 @@ public class Dashboard extends javax.swing.JFrame {
         TbUsuario.setModel(contro.TablaUsuario());
         Limpiar();
     }//GEN-LAST:event_LBEliminarMouseClicked
+
+    private void LbRegisModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbRegisModificarMouseClicked
+        int file = TbRegisRProductos.getSelectedRow();
+        GuarTipoPro = "Mo";
+        if (file == -1) {
+            JOptionPane.showMessageDialog(null, "Seleccione un registro primero");
+        } else {
+            
+            txtRegisProducto.setText(TbRegisRProductos.getValueAt(file,0).toString());
+            txtRegisPrecio.setText(TbRegisRProductos.getValueAt(file,1).toString());
+            JCRegisCategoria.setSelectedItem(TbRegisRProductos.getValueAt(file,2).toString());
+            txtRegisUnidad.setText(TbRegisRProductos.getValueAt(file,3).toString());
+            
+        }
+    }//GEN-LAST:event_LbRegisModificarMouseClicked
+
+    private void LbRegisEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbRegisEliminarMouseClicked
+       int file = TbRegisRProductos.getSelectedRow();
+        if (file == -1) {
+            JOptionPane.showMessageDialog(null, "Seleccione un registro primero");
+        } else {
+            contro.EliminarPro(TbRegisRProductos.getValueAt(file,0).toString(),TbRegisRProductos.getValueAt(file,3).toString());
+            TbRegisRProductos.setModel(contro.TablaProductos());
+        }
+    }//GEN-LAST:event_LbRegisEliminarMouseClicked
+
+    private void LbRegisCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbRegisCancelarMouseClicked
+        LimpiarProducto();
+    }//GEN-LAST:event_LbRegisCancelarMouseClicked
+
+    private void LbRegisAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbRegisAceptarMouseClicked
+        if (GuarTipoPro.equals("Ag")) {
+            contro.AgregarProduc(txtRegisProducto.getText(), txtRegisPrecio.getText(), txtRegisUnidad.getText(), txtRegisImagen.getText(),JCRegisCategoria.getSelectedItem().toString());
+            LimpiarProducto();
+            TbRegisRProductos.setModel(contro.TablaProductos());
+        }else if(GuarTipoPro.equals("Mo")){
+             contro.ModificarProduc(txtRegisProducto.getText(), txtRegisPrecio.getText(), txtRegisUnidad.getText(), txtRegisImagen.getText(),JCRegisCategoria.getSelectedItem().toString());   
+             LimpiarProducto();
+             TbRegisRProductos.setModel(contro.TablaProductos());
+        }
+    }//GEN-LAST:event_LbRegisAceptarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -2152,6 +2222,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel Cobro;
     private javax.swing.JPanel EscritorioInterno;
     private javax.swing.JPanel Header;
+    private javax.swing.JComboBox<String> JCRegisCategoria;
     private com.toedter.calendar.JDateChooser JDFecha;
     private javax.swing.JPasswordField JPContra;
     private javax.swing.JPanel JPrincipal;
@@ -2163,8 +2234,18 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel LBVentas;
     private javax.swing.JLabel LBproduc;
     private javax.swing.JLabel LbCaja;
+    private javax.swing.JLabel LbCateAceptar;
+    private javax.swing.JLabel LbCateBuscar;
+    private javax.swing.JLabel LbCateCancelar;
+    private javax.swing.JLabel LbCateEliminar;
+    private javax.swing.JLabel LbCateModificar;
     private javax.swing.JLabel LbDama;
     private javax.swing.JLabel LbProductos;
+    private javax.swing.JLabel LbRegisAceptar;
+    private javax.swing.JLabel LbRegisBuscar;
+    private javax.swing.JLabel LbRegisCancelar;
+    private javax.swing.JLabel LbRegisEliminar;
+    private javax.swing.JLabel LbRegisModificar;
     private javax.swing.JLabel LbUsuario;
     private javax.swing.JLabel LbVentas;
     private javax.swing.JPanel MenuDesple;
@@ -2172,11 +2253,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel Productos1;
     private javax.swing.JPanel Productos2;
     private javax.swing.JPanel Productos3;
+    private javax.swing.JTable TbCateCategoria;
+    private javax.swing.JTable TbRegisRProductos;
     private javax.swing.JTable TbUsuario;
     private javax.swing.JPanel Usuario;
     private javax.swing.JPanel Venta;
     private javax.swing.JPanel Ventas;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
@@ -2225,12 +2307,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -2250,9 +2326,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
@@ -2291,10 +2364,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
-    private javax.swing.JLabel jLabel82;
-    private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
@@ -2324,15 +2394,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
-    private javax.swing.JTable jTable6;
-    private javax.swing.JTable jTable7;
     private javax.swing.JTable jTable8;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
@@ -2345,7 +2412,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
@@ -2358,16 +2424,18 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField38;
     private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel lbX;
     private javax.swing.JLabel lbminimizar;
     private javax.swing.JPanel pnlFuncinesPantallas;
     private javax.swing.JTextField txtApellidos;
+    private javax.swing.JTextField txtCateBuscar;
+    private javax.swing.JTextField txtCateDescipcion;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtRegisBuscar;
+    private javax.swing.JTextField txtRegisImagen;
+    private javax.swing.JTextField txtRegisPrecio;
+    private javax.swing.JTextField txtRegisProducto;
+    private javax.swing.JTextField txtRegisUnidad;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

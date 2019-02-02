@@ -46,7 +46,7 @@ public class Consultas {
         try {
             st = cn.createStatement();
             ResultSet rs = st.executeQuery("select " + Campos + " from " + tabla + " where " + p1);
-       
+            //System.out.println("select " + Campos + " from " + tabla + " where " + p1);
             return rs;
         } catch (SQLException ex) {
             System.out.println(ex);
@@ -55,26 +55,29 @@ public class Consultas {
             return null;
         }
     }
+
     //modificar Usuario
-    public void ModificarUser(String Rsql){
+    public void ModificarUser(String Rsql) {
         //UPDATE `usuario` SET `name` = 'Praxx' WHERE `usuario`.`id` = 7;
-        try{
-            st =  cn.createStatement();
-            st.executeUpdate("UPDATE usuario SET "+Rsql);
-        }catch (SQLException ex) {
+        try {
+            st = cn.createStatement();
+            st.executeUpdate("UPDATE usuario SET " + Rsql);
+        } catch (SQLException ex) {
             Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
+
     //Eliminar Usuario
-    public void EliminarUser(String sql){
-         try{
-            st =  cn.createStatement();
+    public void EliminarUser(String sql) {
+        try {
+            st = cn.createStatement();
             st.executeUpdate(sql);
-        }catch (SQLException ex) {
+        } catch (SQLException ex) {
             Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
     //agregar usuario nuevo 
     public void AgregarUsuario(String nombre, String Apellido, String Usuario, String Contrase, String Fecha, String Estado) {
         try {
@@ -87,36 +90,84 @@ public class Consultas {
         }
 
     }
-    
-    
-    //Metodos de Producto
-    //modificar
-    public void ModificarPr(String Rsql){
-        //UPDATE `usuario` SET `name` = 'Praxx' WHERE `usuario`.`id` = 7;
-        try{
-            st =  cn.createStatement();
-            st.executeUpdate("UPDATE producto SET "+Rsql);
-        }catch (SQLException ex) {
+
+    //Metodos de Categoria
+    public void AgregarCate(String nombre) {
+        try {
+            st = cn.createStatement();
+            ResultSet rs = consultar("id", "categoria", " name = '" + nombre + "'");
+            String y = "";
+            while (rs.next()) {
+                y = rs.getString(1);
+            }
+            if (!y.equals("")) {
+                JOptionPane.showMessageDialog(null, "Esta categoria ya existe");
+            } else {
+
+                //INSERT INTO `categoria` (`id`, `name`, `status`) VALUES (NULL, 'ca2', '');
+                st.executeUpdate("INSERT INTO categoria (name,status) VALUES"
+                        + "('" + nombre + "',1)");
+            }
+
+        } catch (SQLException ex) {
             Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
+
+    public void ModificarCar(String Rsql,String nombre ) {
+        //UPDATE `usuario` SET `name` = 'Praxx' WHERE `usuario`.`id` = 7;
+        try {
+            st = cn.createStatement();
+            ResultSet rs = consultar("id", "categoria", " name = '" + nombre + "'");
+            String y = "";
+            while (rs.next()) {
+                y = rs.getString(1);
+            }
+            if (!y.equals("")) {
+                JOptionPane.showMessageDialog(null, "Esta categoria ya existe");
+            } else {
+
+                st.executeUpdate("UPDATE categoria SET " + Rsql);
+                //        System.out.println("UPDATE producto SET "+Rsql);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    //Metodos de Producto
+    //modificar
+    public void ModificarPr(String Rsql) {
+        //UPDATE `usuario` SET `name` = 'Praxx' WHERE `usuario`.`id` = 7;
+        try {
+            st = cn.createStatement();
+            st.executeUpdate("UPDATE producto SET " + Rsql);
+            //        System.out.println("UPDATE producto SET "+Rsql);
+        } catch (SQLException ex) {
+            Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
     //Eliminar
-    public void EliminarPro(String sql){
-         try{
-            st =  cn.createStatement();
+    public void EliminarPro(String sql) {
+        try {
+            st = cn.createStatement();
             st.executeUpdate(sql);
-        }catch (SQLException ex) {
+        } catch (SQLException ex) {
             Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
     //agregar
-    public void AgregarPro(String nombre, String precio, String unidad,String imagen,String cate) {
+    public void AgregarPro(String nombre, String precio, String unidad, String imagen, String cate) {
         try {
             st = cn.createStatement();
             //INSERT INTO `producto` (`id`, `name`, `price`, `unity`, `image`, `idCategory`, `status`) VALUES (NULL, 'Victoria', '34', '12', 'No hay', '2', '1');
             st.executeUpdate("INSERT INTO producto(name,price,unity,image,idCategory,status)"
-                    + " VALUES ('" + nombre + "','" + precio + "','" + unidad + "','" + imagen + "','"+cate+"','1')");
+                    + " VALUES ('" + nombre + "','" + precio + "','" + unidad + "','" + imagen + "','" + cate + "','1')");
         } catch (SQLException ex) {
             Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
         }

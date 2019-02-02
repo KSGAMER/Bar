@@ -56,13 +56,25 @@ public class Controlador {
         return id;
     }
 
-    public void ModificarProduc(String nombre, String precio, String unidad, String imagen, String cate) {
+    public void ModificarCate(String Nombre, String idC){
+        //UPDATE `categoria` SET `status` = '1' WHERE `categoria`.`id` = 3;
+        con.ModificarCar("name ='"+Nombre+"' where id= '"+idC+"'",Nombre);
+    }
+    
+    public void ModificarProduc(String nombre, String precio, String unidad, String imagen, String cate,String idP) {
         String id = idPrC(cate);
-        con.ModificarPr("name = '" + nombre + "',price='" + precio + "', unity='" + unidad + "', image='" + imagen + "',idCategory='" + id + "'");
+        con.ModificarPr("name = '" + nombre + "',price='" + precio + "', unity='" + unidad + "', image='" + imagen + "',idCategory='" + id + "' where id = '"+idP+"'");
     }
 
+    public void EliminarCate(String idC){
+        con.EliminarPro("Update categoria set status = 0 where id='"+idC+"'");
+    }
     public void EliminarPro(String Nombre, String Unidad){
         con.EliminarPro("Update producto set status = 0 where name ='"+Nombre+"' and unity='"+Unidad+"'");
+    }
+    
+    public void AgregarCate(String Cat){
+        con.AgregarCate(Cat);
     }
     public void AgregarProduc(String nombre, String precio, String unidad, String imagen, String cate) {
         String id = idPrC(cate);
@@ -142,6 +154,32 @@ public class Controlador {
         }
         return id;
     }
+    public String idP(String Nombre, String Unidad ) {
+        String id = null;
+        ResultSet rs = con.consultar("id", "producto", " name ='"+Nombre+"' and unity='"+Unidad+"'");
+        try {
+            while (rs.next()) {
+                id = rs.getString(1);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id;
+    }
+      public String idC(String Nombre) {
+        String id = null;
+        ResultSet rs = con.consultar("id", "categoria", " name ='"+Nombre+"'");
+        try {
+            while (rs.next()) {
+                id = rs.getString(1);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id;
+    }
+
+                
 
     public void ModificarUser(String id, String Usuario, String Nombre, String Apellido, String Pass) {
         //name` = 'Praxx' WHERE `usuario`.`id` = 7

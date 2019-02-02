@@ -28,28 +28,35 @@ public class Dashboard extends javax.swing.JFrame {
     Controlador contro = new Controlador();
 
     void Limpiar() {
+        idMod = "";
+        GuarTipo = "Ag";
         txtNombre.setText("");
         txtApellidos.setText("");
         txtUsuario.setText("");
         JPContra.setText("");
 //         JDFecha.setDate(new Date(1997,11,23));
     }
+
     void LimpiarProducto() {
-        txtRegisBuscar.setText("");
+        idMProd = "";
+        GuarTipoPro = "Ag";
         txtRegisImagen.setText("");
         txtRegisPrecio.setText("");
         txtRegisProducto.setText("");
         txtRegisUnidad.setText("");
         JCRegisCategoria.setSelectedIndex(0);
     }
+
     void LimpiarCategoria() {
+        idMCate = "";
+        GuarTipoCate = "Ag";
         txtCateDescipcion.setText("");
-        txtCateBuscar.setText("");
     }
-    void CargarBoxProduc(){
+
+    void CargarBoxProduc() {
         JCRegisCategoria.removeAllItems();
         ArrayList ar = contro.ComboxPro();
-        for(int  i=0; i<ar.size(); i++){
+        for (int i = 0; i < ar.size(); i++) {
             JCRegisCategoria.addItem(ar.get(i).toString());
         }
     }
@@ -57,6 +64,7 @@ public class Dashboard extends javax.swing.JFrame {
     void Iniciar() {
         // EscritorioInterno.setBorder(new ImagenFondo("../Imagen/bar2.jpg"));
         Deslizable();
+        TbUsuario.setModel(contro.TablaUsuario());
     }
 
     /**
@@ -156,8 +164,6 @@ public class Dashboard extends javax.swing.JFrame {
         LbRegisEliminar = new javax.swing.JLabel();
         LbRegisAceptar = new javax.swing.JLabel();
         LbRegisCancelar = new javax.swing.JLabel();
-        txtRegisBuscar = new javax.swing.JTextField();
-        LbRegisBuscar = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         Productos1 = new javax.swing.JPanel();
@@ -247,10 +253,6 @@ public class Dashboard extends javax.swing.JFrame {
         TbRegisRProductos = new javax.swing.JTable();
         jScrollPane7 = new javax.swing.JScrollPane();
         TbCateCategoria = new javax.swing.JTable();
-        jTextField27 = new javax.swing.JTextField();
-        jLabel84 = new javax.swing.JLabel();
-        txtCateBuscar = new javax.swing.JTextField();
-        LbCateBuscar = new javax.swing.JLabel();
         Ventas = new javax.swing.JPanel();
         jLabel102 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
@@ -1001,17 +1003,6 @@ public class Dashboard extends javax.swing.JFrame {
         });
         Productos.add(LbRegisCancelar);
         LbRegisCancelar.setBounds(410, 240, 90, 40);
-        Productos.add(txtRegisBuscar);
-        txtRegisBuscar.setBounds(540, 60, 480, 40);
-
-        LbRegisBuscar.setBackground(new java.awt.Color(47, 153, 57));
-        LbRegisBuscar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        LbRegisBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        LbRegisBuscar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LbRegisBuscar.setText("Buscar");
-        LbRegisBuscar.setOpaque(true);
-        Productos.add(LbRegisBuscar);
-        LbRegisBuscar.setBounds(1020, 60, 100, 40);
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
@@ -1168,6 +1159,11 @@ public class Dashboard extends javax.swing.JFrame {
         LbCateModificar.setText("Modificar");
         LbCateModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LbCateModificar.setOpaque(true);
+        LbCateModificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbCateModificarMouseClicked(evt);
+            }
+        });
         Productos.add(LbCateModificar);
         LbCateModificar.setBounds(30, 390, 120, 40);
 
@@ -1178,6 +1174,11 @@ public class Dashboard extends javax.swing.JFrame {
         LbCateEliminar.setText("Eliminar");
         LbCateEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LbCateEliminar.setOpaque(true);
+        LbCateEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbCateEliminarMouseClicked(evt);
+            }
+        });
         Productos.add(LbCateEliminar);
         LbCateEliminar.setBounds(340, 390, 100, 40);
         Productos.add(txtCateDescipcion);
@@ -1504,6 +1505,11 @@ public class Dashboard extends javax.swing.JFrame {
         LbCateCancelar.setText("Cancelar");
         LbCateCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LbCateCancelar.setOpaque(true);
+        LbCateCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbCateCancelarMouseClicked(evt);
+            }
+        });
         Productos.add(LbCateCancelar);
         LbCateCancelar.setBounds(330, 540, 110, 40);
 
@@ -1514,6 +1520,11 @@ public class Dashboard extends javax.swing.JFrame {
         LbCateAceptar.setText("Aceptar");
         LbCateAceptar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LbCateAceptar.setOpaque(true);
+        LbCateAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LbCateAceptarMouseClicked(evt);
+            }
+        });
         Productos.add(LbCateAceptar);
         LbCateAceptar.setBounds(40, 540, 110, 40);
 
@@ -1531,7 +1542,7 @@ public class Dashboard extends javax.swing.JFrame {
         jScrollPane6.setViewportView(TbRegisRProductos);
 
         Productos.add(jScrollPane6);
-        jScrollPane6.setBounds(540, 120, 580, 170);
+        jScrollPane6.setBounds(540, 50, 580, 240);
 
         TbCateCategoria.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1547,29 +1558,7 @@ public class Dashboard extends javax.swing.JFrame {
         jScrollPane7.setViewportView(TbCateCategoria);
 
         Productos.add(jScrollPane7);
-        jScrollPane7.setBounds(530, 460, 590, 130);
-        Productos.add(jTextField27);
-        jTextField27.setBounds(540, 60, 360, 40);
-
-        jLabel84.setBackground(new java.awt.Color(47, 153, 57));
-        jLabel84.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel84.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel84.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel84.setText("Buscar");
-        jLabel84.setOpaque(true);
-        Productos.add(jLabel84);
-        jLabel84.setBounds(900, 60, 80, 40);
-        Productos.add(txtCateBuscar);
-        txtCateBuscar.setBounds(530, 390, 490, 40);
-
-        LbCateBuscar.setBackground(new java.awt.Color(47, 153, 57));
-        LbCateBuscar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        LbCateBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        LbCateBuscar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LbCateBuscar.setText("Buscar");
-        LbCateBuscar.setOpaque(true);
-        Productos.add(LbCateBuscar);
-        LbCateBuscar.setBounds(1020, 390, 100, 40);
+        jScrollPane7.setBounds(530, 380, 590, 230);
 
         EscritorioInterno.add(Productos, "card2");
 
@@ -1948,6 +1937,7 @@ public class Dashboard extends javax.swing.JFrame {
     String idMCate;
     String idMod;
     String idMProd;
+
     void Cambio(boolean Bo) {
 //        FotoInicial.setVisible(Bo);
         LbUsuario.setVisible(Bo);
@@ -2096,7 +2086,7 @@ public class Dashboard extends javax.swing.JFrame {
         Cobro.setVisible(true);
         Venta.setVisible(false);
     }//GEN-LAST:event_jLabel114MouseClicked
-    
+
     private void BtnGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnGuardarMouseClicked
         if (GuarTipo.equals("Ag")) {
             SimpleDateFormat fec = new SimpleDateFormat("YYYY-MM-dd");
@@ -2104,9 +2094,9 @@ public class Dashboard extends javax.swing.JFrame {
             contro.AgregarUser(txtNombre.getText(), txtApellidos.getText(), txtUsuario.getText(), JPContra.getText(), Fecha2, "Perfil");
             Limpiar();
             TbUsuario.setModel(contro.TablaUsuario());
-        }else if(GuarTipo.equals("Mo")){
-           
-            contro.ModificarUser(idMod,txtUsuario.getText(),txtNombre.getText(),txtApellidos.getText(),JPContra.getText());
+        } else if (GuarTipo.equals("Mo")) {
+
+            contro.ModificarUser(idMod, txtUsuario.getText(), txtNombre.getText(), txtApellidos.getText(), JPContra.getText());
             idMod = null;
             Limpiar();
             TbUsuario.setModel(contro.TablaUsuario());
@@ -2123,10 +2113,10 @@ public class Dashboard extends javax.swing.JFrame {
         if (file == -1) {
             JOptionPane.showMessageDialog(null, "Seleccione un registro primero");
         } else {
-            txtNombre.setText(TbUsuario.getValueAt(file,0).toString());
-            txtApellidos.setText(TbUsuario.getValueAt(file,1).toString());
-            txtUsuario.setText(TbUsuario.getValueAt(file,2).toString());
-            idMod =contro.id(txtUsuario.getText(), txtNombre.getText());
+            txtNombre.setText(TbUsuario.getValueAt(file, 0).toString());
+            txtApellidos.setText(TbUsuario.getValueAt(file, 1).toString());
+            txtUsuario.setText(TbUsuario.getValueAt(file, 2).toString());
+            idMod = contro.id(txtUsuario.getText(), txtNombre.getText());
         }
     }//GEN-LAST:event_LBModificarMouseClicked
 
@@ -2143,21 +2133,22 @@ public class Dashboard extends javax.swing.JFrame {
         if (file == -1) {
             JOptionPane.showMessageDialog(null, "Seleccione un registro primero");
         } else {
-            
-            txtRegisProducto.setText(TbRegisRProductos.getValueAt(file,0).toString());
-            txtRegisPrecio.setText(TbRegisRProductos.getValueAt(file,1).toString());
-            JCRegisCategoria.setSelectedItem(TbRegisRProductos.getValueAt(file,2).toString());
-            txtRegisUnidad.setText(TbRegisRProductos.getValueAt(file,3).toString());
-            
+
+            txtRegisProducto.setText(TbRegisRProductos.getValueAt(file, 0).toString());
+            txtRegisPrecio.setText(TbRegisRProductos.getValueAt(file, 1).toString());
+            JCRegisCategoria.setSelectedItem(TbRegisRProductos.getValueAt(file, 2).toString());
+            txtRegisUnidad.setText(TbRegisRProductos.getValueAt(file, 3).toString());
+            idMProd = contro.idP(TbRegisRProductos.getValueAt(file, 0).toString(), TbRegisRProductos.getValueAt(file, 3).toString());
+
         }
     }//GEN-LAST:event_LbRegisModificarMouseClicked
 
     private void LbRegisEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbRegisEliminarMouseClicked
-       int file = TbRegisRProductos.getSelectedRow();
+        int file = TbRegisRProductos.getSelectedRow();
         if (file == -1) {
             JOptionPane.showMessageDialog(null, "Seleccione un registro primero");
         } else {
-            contro.EliminarPro(TbRegisRProductos.getValueAt(file,0).toString(),TbRegisRProductos.getValueAt(file,3).toString());
+            contro.EliminarPro(TbRegisRProductos.getValueAt(file, 0).toString(), TbRegisRProductos.getValueAt(file, 3).toString());
             TbRegisRProductos.setModel(contro.TablaProductos());
         }
     }//GEN-LAST:event_LbRegisEliminarMouseClicked
@@ -2168,15 +2159,50 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void LbRegisAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbRegisAceptarMouseClicked
         if (GuarTipoPro.equals("Ag")) {
-            contro.AgregarProduc(txtRegisProducto.getText(), txtRegisPrecio.getText(), txtRegisUnidad.getText(), txtRegisImagen.getText(),JCRegisCategoria.getSelectedItem().toString());
+            contro.AgregarProduc(txtRegisProducto.getText(), txtRegisPrecio.getText(), txtRegisUnidad.getText(), txtRegisImagen.getText(), JCRegisCategoria.getSelectedItem().toString());
             LimpiarProducto();
             TbRegisRProductos.setModel(contro.TablaProductos());
-        }else if(GuarTipoPro.equals("Mo")){
-             contro.ModificarProduc(txtRegisProducto.getText(), txtRegisPrecio.getText(), txtRegisUnidad.getText(), txtRegisImagen.getText(),JCRegisCategoria.getSelectedItem().toString());   
-             LimpiarProducto();
-             TbRegisRProductos.setModel(contro.TablaProductos());
+        } else if (GuarTipoPro.equals("Mo")) {
+            contro.ModificarProduc(txtRegisProducto.getText(), txtRegisPrecio.getText(), txtRegisUnidad.getText(), txtRegisImagen.getText(), JCRegisCategoria.getSelectedItem().toString(), idMProd);
+            LimpiarProducto();
+            TbRegisRProductos.setModel(contro.TablaProductos());
         }
     }//GEN-LAST:event_LbRegisAceptarMouseClicked
+
+    private void LbCateCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbCateCancelarMouseClicked
+        LimpiarCategoria();
+    }//GEN-LAST:event_LbCateCancelarMouseClicked
+
+    private void LbCateModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbCateModificarMouseClicked
+        int file = TbCateCategoria.getSelectedRow();
+        GuarTipoCate = "Mo";
+        if (file == -1) {
+            JOptionPane.showMessageDialog(null, "Seleccione un registro primero");
+        } else {
+            txtCateDescipcion.setText(TbCateCategoria.getValueAt(file, 0).toString());
+            idMCate = contro.idC(TbCateCategoria.getValueAt(file, 0).toString());
+        }
+    }//GEN-LAST:event_LbCateModificarMouseClicked
+
+    private void LbCateAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbCateAceptarMouseClicked
+        if (GuarTipoCate.equals("Ag")) {
+            contro.AgregarCate(txtCateDescipcion.getText());
+            LimpiarCategoria();
+            TbCateCategoria.setModel(contro.TablaCategoria());
+            CargarBoxProduc();
+        } else if (GuarTipoCate.equals("Mo")) {
+            contro.ModificarCate(txtCateDescipcion.getText(), idMCate);
+            LimpiarCategoria();
+            CargarBoxProduc();
+            TbCateCategoria.setModel(contro.TablaCategoria());
+        }
+    }//GEN-LAST:event_LbCateAceptarMouseClicked
+
+    private void LbCateEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbCateEliminarMouseClicked
+        contro.EliminarCate(idMCate);
+        LimpiarCategoria();
+        CargarBoxProduc();
+    }//GEN-LAST:event_LbCateEliminarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -2235,14 +2261,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel LBproduc;
     private javax.swing.JLabel LbCaja;
     private javax.swing.JLabel LbCateAceptar;
-    private javax.swing.JLabel LbCateBuscar;
     private javax.swing.JLabel LbCateCancelar;
     private javax.swing.JLabel LbCateEliminar;
     private javax.swing.JLabel LbCateModificar;
     private javax.swing.JLabel LbDama;
     private javax.swing.JLabel LbProductos;
     private javax.swing.JLabel LbRegisAceptar;
-    private javax.swing.JLabel LbRegisBuscar;
     private javax.swing.JLabel LbRegisCancelar;
     private javax.swing.JLabel LbRegisEliminar;
     private javax.swing.JLabel LbRegisModificar;
@@ -2364,7 +2388,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
-    private javax.swing.JLabel jLabel84;
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
@@ -2411,7 +2434,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
@@ -2428,10 +2450,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lbminimizar;
     private javax.swing.JPanel pnlFuncinesPantallas;
     private javax.swing.JTextField txtApellidos;
-    private javax.swing.JTextField txtCateBuscar;
     private javax.swing.JTextField txtCateDescipcion;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtRegisBuscar;
     private javax.swing.JTextField txtRegisImagen;
     private javax.swing.JTextField txtRegisPrecio;
     private javax.swing.JTextField txtRegisProducto;

@@ -45,12 +45,24 @@ public class Dashboard extends javax.swing.JFrame {
         txtRegisProducto.setText("");
         txtRegisUnidad.setText("");
         JCRegisCategoria.setSelectedIndex(0);
+        
     }
 
     void LimpiarCategoria() {
         idMCate = "";
         GuarTipoCate = "Ag";
         txtCateDescipcion.setText("");
+    }
+    
+    void LimpiarDama() {
+        idDama = "";
+        GuarTipoDama = "Ag";
+        txtDama.setText("");
+        txtDamaPrice.setText("");
+        txtDamaUnity.setText("");
+        cmbDamaCategory.setSelectedIndex(0);
+        cmbDamaProduct.setSelectedIndex(0);
+        cmbDamaUser.setSelectedIndex(0);
     }
 
     void CargarBoxProduc() {
@@ -60,11 +72,32 @@ public class Dashboard extends javax.swing.JFrame {
             JCRegisCategoria.addItem(ar.get(i).toString());
         }
     }
+    
+    void CargarBoxCervezaDama() {
+        cmbDamaCategory.removeAllItems();
+        ArrayList cmbCategory = contro.ComboxPro();
+        for (int i = 0; i < cmbCategory.size(); i++) {
+            cmbDamaCategory.addItem(cmbCategory.get(i).toString());
+        }
+        cmbDamaProduct.removeAllItems();
+        ArrayList cmbProduct = contro.ComboxProduct();
+        for (int i = 0; i < cmbProduct.size(); i++) {
+            cmbDamaProduct.addItem(cmbProduct.get(i).toString());
+        }
+        cmbDamaUser.removeAllItems();
+        ArrayList cmbUser = contro.ComboxUser();
+        for (int i = 0; i < cmbUser.size(); i++) {
+            cmbDamaUser.addItem(cmbUser.get(i).toString());
+        }
+    }
 
     void Iniciar() {
         // EscritorioInterno.setBorder(new ImagenFondo("../Imagen/bar2.jpg"));
         Deslizable();
         TbUsuario.setModel(contro.TablaUsuario());
+        TbCateCategoria.setModel(contro.TablaCategoria());
+        tbCervDama.setModel(contro.TablaCervDama());
+        TbRegisRProductos.setModel(contro.TablaProductos());
     }
 
     /**
@@ -128,25 +161,26 @@ public class Dashboard extends javax.swing.JFrame {
         CervDama = new javax.swing.JPanel();
         jLabel89 = new javax.swing.JLabel();
         jLabel88 = new javax.swing.JLabel();
-        jLabel90 = new javax.swing.JLabel();
         jLabel91 = new javax.swing.JLabel();
-        jTextField29 = new javax.swing.JTextField();
+        txtDama = new javax.swing.JTextField();
         jLabel92 = new javax.swing.JLabel();
-        jTextField30 = new javax.swing.JTextField();
-        jTextField32 = new javax.swing.JTextField();
+        txtDamaPrice = new javax.swing.JTextField();
+        txtDamaUnity = new javax.swing.JTextField();
         jLabel94 = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
-        jLabel96 = new javax.swing.JLabel();
-        jLabel97 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        btnDamaModify = new javax.swing.JLabel();
+        btnDamaDelete = new javax.swing.JLabel();
+        btnDamaCancel = new javax.swing.JLabel();
+        btnGuardarDama = new javax.swing.JLabel();
+        cmbDamaUser = new javax.swing.JComboBox<>();
         jLabel93 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
+        cmbDamaProduct = new javax.swing.JComboBox<>();
         jLabel99 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tbCervDama = new javax.swing.JTable();
         jTextField31 = new javax.swing.JTextField();
         jLabel100 = new javax.swing.JLabel();
+        cmbDamaCategory = new javax.swing.JComboBox<>();
+        jLabel98 = new javax.swing.JLabel();
         Productos = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -785,91 +819,86 @@ public class Dashboard extends javax.swing.JFrame {
         CervDama.add(jLabel88);
         jLabel88.setBounds(0, 0, 1350, 40);
 
-        jLabel90.setBackground(new java.awt.Color(61, 136, 56));
-        jLabel90.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel90.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel90.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel90.setText("Agregar");
-        jLabel90.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel90.setOpaque(true);
-        CervDama.add(jLabel90);
-        jLabel90.setBounds(50, 60, 120, 40);
-
         jLabel91.setText("Nombre:");
         CervDama.add(jLabel91);
         jLabel91.setBounds(50, 140, 70, 14);
-        CervDama.add(jTextField29);
-        jTextField29.setBounds(50, 160, 210, 30);
+        CervDama.add(txtDama);
+        txtDama.setBounds(50, 160, 210, 30);
 
         jLabel92.setText("Precio:");
         CervDama.add(jLabel92);
         jLabel92.setBounds(50, 200, 60, 14);
-        CervDama.add(jTextField30);
-        jTextField30.setBounds(50, 220, 210, 30);
-        CervDama.add(jTextField32);
-        jTextField32.setBounds(290, 160, 210, 30);
+        CervDama.add(txtDamaPrice);
+        txtDamaPrice.setBounds(50, 220, 210, 30);
+        CervDama.add(txtDamaUnity);
+        txtDamaUnity.setBounds(290, 160, 210, 30);
 
         jLabel94.setText("Unidad:");
         CervDama.add(jLabel94);
         jLabel94.setBounds(290, 140, 50, 14);
 
-        jLabel95.setBackground(new java.awt.Color(42, 61, 121));
-        jLabel95.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel95.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel95.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel95.setText("Modificar");
-        jLabel95.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel95.setOpaque(true);
-        CervDama.add(jLabel95);
-        jLabel95.setBounds(200, 60, 120, 40);
+        btnDamaModify.setBackground(new java.awt.Color(42, 61, 121));
+        btnDamaModify.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnDamaModify.setForeground(new java.awt.Color(255, 255, 255));
+        btnDamaModify.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnDamaModify.setText("Modificar");
+        btnDamaModify.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDamaModify.setOpaque(true);
+        CervDama.add(btnDamaModify);
+        btnDamaModify.setBounds(50, 60, 120, 40);
 
-        jLabel96.setBackground(new java.awt.Color(190, 41, 41));
-        jLabel96.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel96.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel96.setText("Eliminar");
-        jLabel96.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel96.setOpaque(true);
-        CervDama.add(jLabel96);
-        jLabel96.setBounds(350, 60, 100, 40);
+        btnDamaDelete.setBackground(new java.awt.Color(190, 41, 41));
+        btnDamaDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnDamaDelete.setForeground(new java.awt.Color(255, 255, 255));
+        btnDamaDelete.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnDamaDelete.setText("Eliminar");
+        btnDamaDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDamaDelete.setOpaque(true);
+        CervDama.add(btnDamaDelete);
+        btnDamaDelete.setBounds(290, 60, 100, 40);
 
-        jLabel97.setBackground(new java.awt.Color(188, 14, 14));
-        jLabel97.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel97.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel97.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel97.setText("Cancelar");
-        jLabel97.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel97.setOpaque(true);
-        CervDama.add(jLabel97);
-        jLabel97.setBounds(290, 340, 120, 40);
+        btnDamaCancel.setBackground(new java.awt.Color(188, 14, 14));
+        btnDamaCancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnDamaCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnDamaCancel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnDamaCancel.setText("Cancelar");
+        btnDamaCancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDamaCancel.setOpaque(true);
+        CervDama.add(btnDamaCancel);
+        btnDamaCancel.setBounds(290, 340, 120, 40);
 
-        jLabel98.setBackground(new java.awt.Color(15, 142, 27));
-        jLabel98.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel98.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel98.setText("Aceptar");
-        jLabel98.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel98.setOpaque(true);
-        CervDama.add(jLabel98);
-        jLabel98.setBounds(120, 340, 130, 40);
+        btnGuardarDama.setBackground(new java.awt.Color(15, 142, 27));
+        btnGuardarDama.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnGuardarDama.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardarDama.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnGuardarDama.setText("Aceptar");
+        btnGuardarDama.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGuardarDama.setOpaque(true);
+        btnGuardarDama.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnGuardarDamaMouseClicked(evt);
+            }
+        });
+        CervDama.add(btnGuardarDama);
+        btnGuardarDama.setBounds(120, 340, 130, 40);
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        CervDama.add(jComboBox5);
-        jComboBox5.setBounds(50, 280, 210, 30);
+        cmbDamaUser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CervDama.add(cmbDamaUser);
+        cmbDamaUser.setBounds(290, 280, 210, 30);
 
-        jLabel93.setText("Categoria:");
+        jLabel93.setText("Usuario:");
         CervDama.add(jLabel93);
-        jLabel93.setBounds(50, 260, 60, 14);
+        jLabel93.setBounds(290, 260, 80, 14);
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        CervDama.add(jComboBox6);
-        jComboBox6.setBounds(290, 220, 210, 30);
+        cmbDamaProduct.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CervDama.add(cmbDamaProduct);
+        cmbDamaProduct.setBounds(290, 220, 210, 30);
 
-        jLabel99.setText("Cerveza:");
+        jLabel99.setText("Producto:");
         CervDama.add(jLabel99);
         jLabel99.setBounds(290, 200, 60, 14);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tbCervDama.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -880,7 +909,7 @@ public class Dashboard extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tbCervDama);
 
         CervDama.add(jScrollPane2);
         jScrollPane2.setBounds(550, 140, 580, 402);
@@ -895,6 +924,14 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel100.setOpaque(true);
         CervDama.add(jLabel100);
         jLabel100.setBounds(1020, 60, 100, 40);
+
+        cmbDamaCategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CervDama.add(cmbDamaCategory);
+        cmbDamaCategory.setBounds(50, 280, 210, 30);
+
+        jLabel98.setText("Categoria:");
+        CervDama.add(jLabel98);
+        jLabel98.setBounds(50, 260, 60, 14);
 
         EscritorioInterno.add(CervDama, "card4");
 
@@ -1934,9 +1971,11 @@ public class Dashboard extends javax.swing.JFrame {
     String GuarTipo = "Ag";
     String GuarTipoPro = "Ag";
     String GuarTipoCate = "Ag";
+    String GuarTipoDama = "Ag";
     String idMCate;
     String idMod;
     String idMProd;
+    String idDama;
 
     void Cambio(boolean Bo) {
 //        FotoInicial.setVisible(Bo);
@@ -2040,6 +2079,8 @@ public class Dashboard extends javax.swing.JFrame {
             Deslizable();
         }
         cambioPaneles(CervDama);
+        tbCervDama.setModel(contro.TablaCervDama());
+        CargarBoxCervezaDama();
     }//GEN-LAST:event_LBDamaMouseClicked
 
     private void LbDamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LbDamaMouseClicked
@@ -2204,6 +2245,10 @@ public class Dashboard extends javax.swing.JFrame {
         CargarBoxProduc();
     }//GEN-LAST:event_LbCateEliminarMouseClicked
 
+    private void btnGuardarDamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuardarDamaMouseClicked
+    
+    }//GEN-LAST:event_btnGuardarDamaMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2283,11 +2328,16 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel Usuario;
     private javax.swing.JPanel Venta;
     private javax.swing.JPanel Ventas;
+    private javax.swing.JLabel btnDamaCancel;
+    private javax.swing.JLabel btnDamaDelete;
+    private javax.swing.JLabel btnDamaModify;
+    private javax.swing.JLabel btnGuardarDama;
+    private javax.swing.JComboBox<String> cmbDamaCategory;
+    private javax.swing.JComboBox<String> cmbDamaProduct;
+    private javax.swing.JComboBox<String> cmbDamaUser;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel100;
@@ -2392,14 +2442,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
@@ -2413,7 +2459,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
@@ -2434,10 +2479,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
     private javax.swing.JTextField jTextField33;
     private javax.swing.JTextField jTextField34;
     private javax.swing.JTextField jTextField35;
@@ -2449,8 +2491,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lbX;
     private javax.swing.JLabel lbminimizar;
     private javax.swing.JPanel pnlFuncinesPantallas;
+    private javax.swing.JTable tbCervDama;
     private javax.swing.JTextField txtApellidos;
     private javax.swing.JTextField txtCateDescipcion;
+    private javax.swing.JTextField txtDama;
+    private javax.swing.JTextField txtDamaPrice;
+    private javax.swing.JTextField txtDamaUnity;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtRegisImagen;
     private javax.swing.JTextField txtRegisPrecio;

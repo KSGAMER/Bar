@@ -55,6 +55,32 @@ public class Controlador {
         }
         return id;
     }
+    
+    public String idCDUser(String Nombre) {
+        String id = null;
+        ResultSet rs = con.consultar("id", "usuario", "username = '" + Nombre + "' and status = 1");
+        try {
+            while(rs.next()) {
+                id = rs.getString(1);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id;
+    }
+    
+    public String idPr(String Nombre) {
+        String id = null;
+        ResultSet rs = con.consultar("id", "producto", "name = '" + Nombre + "' and status = 1");
+        try {
+            while(rs.next()) {
+                id = rs.getString(1);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return id;
+    }
 
     public void ModificarCate(String Nombre, String idC){
         //UPDATE `categoria` SET `status` = '1' WHERE `categoria`.`id` = 3;
@@ -69,6 +95,7 @@ public class Controlador {
     public void EliminarCate(String idC){
         con.EliminarPro("Update categoria set status = 0 where id='"+idC+"'");
     }
+    
     public void EliminarPro(String Nombre, String Unidad){
         con.EliminarPro("Update producto set status = 0 where name ='"+Nombre+"' and unity='"+Unidad+"'");
     }
@@ -76,9 +103,17 @@ public class Controlador {
     public void AgregarCate(String Cat){
         con.AgregarCate(Cat);
     }
+    
     public void AgregarProduc(String nombre, String precio, String unidad, String imagen, String cate) {
         String id = idPrC(cate);
         con.AgregarPro(nombre, precio, unidad, imagen, id);
+    }
+    
+    public void AgregarCervDama(String nombre, String unidad, String precio, String producto, String categoria, String usuario) {
+        String idC = idPrC(categoria);
+        String idU = idCDUser(usuario);
+        String idP = idPr(producto);
+        con.AgregarCervDama(nombre, unidad, precio, idP, idC, idU);
     }
 
     public ArrayList ComboxPro() {
@@ -86,6 +121,32 @@ public class Controlador {
         ResultSet Info = con.TablaUsu("SELECT name FROM categoria  where status = 1");
         try {
             while (Info.next()) {
+                array.add(Info.getString(1));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return array;
+    }
+    
+    public ArrayList ComboxProduct() {
+        ArrayList array = new ArrayList();
+        ResultSet Info = con.TablaUsu("SELECT name FROM producto where status = 1");
+        try {
+            while(Info.next()) {
+                array.add(Info.getString(1));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return array;
+    }
+    
+    public ArrayList ComboxUser() {
+        ArrayList array = new ArrayList();
+        ResultSet Info = con.TablaUsu("SELECT username FROM usuario where status = 1");
+        try {
+            while(Info.next()) {
                 array.add(Info.getString(1));
             }
         } catch (SQLException ex) {
@@ -108,6 +169,28 @@ public class Controlador {
                 registros[2] = Info.getString(3);
                 registros[3] = Info.getString(4);
 
+                model.addRow(registros);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return model;
+    }
+    
+    public DefaultTableModel TablaCervDama() {
+        String titulos[] = {"Dama", "Producto", "Categoria", "Precio", "Unidad", "Usuario"};
+        String[] registros = new String[6];
+        DefaultTableModel model = new DefaultTableModel(null, titulos);
+        ResultSet Info = con.TablaUsu("SELECT d.dama, p.name, c.name, d.price, d.unity, u.name FROM cervezadama as d INNER JOIN producto as p on p.id = d.idProduct INNER JOIN categoria as c on c.id = d.idCategory INNER JOIN usuario as u on u.id = d.idUser WHERE d.status = 1");
+        try {
+            while(Info.next()) {
+                registros[0] = Info.getString(1);
+                registros[1] = Info.getString(2);
+                registros[2] = Info.getString(3);
+                registros[3] = Info.getString(4);
+                registros[4] = Info.getString(5);
+                registros[5] = Info.getString(6);
+                
                 model.addRow(registros);
             }
         } catch (SQLException ex) {
@@ -154,6 +237,7 @@ public class Controlador {
         }
         return id;
     }
+    
     public String idP(String Nombre, String Unidad ) {
         String id = null;
         ResultSet rs = con.consultar("id", "producto", " name ='"+Nombre+"' and unity='"+Unidad+"'");
@@ -166,6 +250,7 @@ public class Controlador {
         }
         return id;
     }
+    
       public String idC(String Nombre) {
         String id = null;
         ResultSet rs = con.consultar("id", "categoria", " name ='"+Nombre+"'");
@@ -178,8 +263,6 @@ public class Controlador {
         }
         return id;
     }
-
-                
 
     public void ModificarUser(String id, String Usuario, String Nombre, String Apellido, String Pass) {
         //name` = 'Praxx' WHERE `usuario`.`id` = 7

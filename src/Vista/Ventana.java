@@ -240,7 +240,6 @@ public class Ventana extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/thumb-1920-836644.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
         Login.add(jLabel1);
         jLabel1.setBounds(0, 0, 1170, 630);
 

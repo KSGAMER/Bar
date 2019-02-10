@@ -77,7 +77,7 @@ public class Consultas {
             Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
     //agregar usuario nuevo 
     public void AgregarUsuario(String nombre, String Apellido, String Usuario, String Contrase, String Fecha, String Estado) {
         try {
@@ -172,6 +172,17 @@ public class Consultas {
             Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+    }
+    
+     //agregar Cerveza Dama nuevo
+    public void AgregarCervDama(String nombre, String unidad, String precio, String producto, String categoria, String usuario) {
+        try {
+            st = cn.createStatement();
+            st.executeUpdate("INSERT INTO cervezadama (dama, unity, price, idProduct, idCategory, idUser, status)"
+            + "VALUES ('"+ nombre + "' , '" + unidad + "', '" +  precio + "', '" + producto + "', '" + categoria + "', '" + usuario + "', 1");
+        } catch (SQLException ex) {
+            Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }
